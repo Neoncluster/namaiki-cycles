@@ -181,6 +181,47 @@
             </div>
         </section>
 
+        <!-- PDF Document Gallery Section -->
+        <section class="space-y-6 border-t border-slate-800 pt-12">
+            <header class="space-y-1">
+                <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Visual Archive</span>
+                <h3 class="text-2xl font-bold text-white">Document Gallery</h3>
+                <p class="text-slate-400 text-sm">Click any page thumbnail to view full-screen.</p>
+            </header>
+
+            <!-- Grid of Clickable Thumbnails (Add as many pages as needed) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <!-- Page 1 -->
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox('page-1.jpg', 'Page 1')">
+                    <img src="page-1.jpg" alt="Archive Page 1" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-15 transition flex items-center justify-center">
+                        <span class="text-xs font-mono bg-black/70 text-amber-400 px-2 py-1 rounded">View Page 1</span>
+                    </div>
+                </div>
+                <!-- Page 2 -->
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox('page-2.jpg', 'Page 2')">
+                    <img src="page-2.jpg" alt="Archive Page 2" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-15 transition flex items-center justify-center">
+                        <span class="text-xs font-mono bg-black/70 text-amber-400 px-2 py-1 rounded">View Page 2</span>
+                    </div>
+                </div>
+                <!-- Page 3 -->
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox('page-3.jpg', 'Page 3')">
+                    <img src="page-3.jpg" alt="Archive Page 3" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-15 transition flex items-center justify-center">
+                        <span class="text-xs font-mono bg-black/70 text-amber-400 px-2 py-1 rounded">View Page 3</span>
+                    </div>
+                </div>
+                <!-- Page 4 -->
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox('page-4.jpg', 'Page 4')">
+                    <img src="page-4.jpg" alt="Archive Page 4" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-15 transition flex items-center justify-center">
+                        <span class="text-xs font-mono bg-black/70 text-amber-400 px-2 py-1 rounded">View Page 4</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Historical Media References -->
         <section class="space-y-4 border-t border-slate-800 pt-8">
             <h3 class="text-lg font-semibold text-slate-200">Historical References & Media Archive Index</h3>
@@ -199,5 +240,31 @@
         <p>Historical Archive • Namaiki Cycles (Tokyo, Japan) • Co-founded by David Duval-Smith & Philip Lord</p>
     </footer>
 
+    <!-- Lightbox Modal Overlay -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden flex-col items-center justify-center p-4 cursor-pointer" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-xl font-mono bg-slate-800 px-3 py-1 rounded hover:bg-slate-700">✕ Close</button>
+        <img id="lightbox-img" src="" alt="Enlarged Archive Page" class="max-w-full max-h-[85vh] object-contain rounded shadow-2xl border border-slate-800">
+        <p id="lightbox-caption" class="text-amber-400 font-mono text-sm mt-4"></p>
+    </div>
+
+    <!-- Lightbox JavaScript -->
+    <script>
+        function openLightbox(imageSrc, captionText) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = imageSrc;
+            lightboxCaption.textContent = captionText;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
