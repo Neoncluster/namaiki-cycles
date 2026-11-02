@@ -110,7 +110,7 @@
                             <strong class="text-slate-200">Namaiki Cycles:</strong> Co-founded and co-owned the independent bicycle venture with Philip Lord, collaboratively leading frameset geometry and design.
                         </li>
                         <li>
-                            <strong class="text-slate-200">Namaiki Design:</strong> Separate from the cycle brand, David (alongside Mike Frank) ran the creative/graphic design agency <em>Namaiki Design</em> out of and in collaboration with the legendary SuperDeluxe venue in Nishi-Azabu, Tokyo.
+                            <strong class="text-slate-200">Namaiki Design:</strong> Separate from the cycle brand, David (alongside Mike Frank) ran the highly successful creative/graphic design agency <em>Namaiki Design</em> out of and in collaboration with the legendary SuperDeluxe venue in Nishi-Azabu, Tokyo.
                         </li>
                     </ul>
                 </div>
@@ -215,7 +215,7 @@
                             <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(${i})">
                                 <img src="${fileName}" alt="Archive Page ${i}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
                                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                    <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View & Translate</span>
+                                    <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page ${i} & Translation</span>
                                 </div>
                             </div>
                         `);
@@ -262,31 +262,45 @@
             
             <!-- Translation & Notes Panel -->
             <div class="w-full md:w-1/2 bg-slate-900 border border-slate-800 rounded-xl p-6 text-slate-300 text-sm overflow-y-auto max-h-[75vh] space-y-4">
-                <span class="text-xs font-mono uppercase tracking-widest text-amber-400 block border-b border-slate-800 pb-2">English Translation & Historical Notes</span>
+                <span class="text-xs font-mono uppercase tracking-widest text-amber-400 block border-b border-slate-800 pb-2">English Translation & Archive Notes</span>
                 <div id="lightbox-translation" class="leading-relaxed space-y-3"></div>
             </div>
         </div>
     </div>
 
-    <!-- Lightbox JavaScript & Corrected Page Translation Dataset -->
+    <!-- Lightbox JavaScript & Direct Page-by-Page Translation Map -->
     <script>
         const pageTranslations = {
-            1: "<strong>BiCycle Club Magazine — Feature Spread (Page 1)</strong><br><br>• <strong>Headline:</strong> <em>'The One Bike to Stand Out on the Street — Street Battle Bike.'</em><br>• <strong>Overview:</strong> Features action shots of the 26-inch front / 24-inch rear hybrid wheel setup created by David Duval-Smith and Philip Lord to bring BMX agility and manual control to mountain biking.",
-            2: "<strong>BiCycle Club Magazine — Technical Breakdown (Page 2)</strong><br><br>• <strong>Geometry & Handling:</strong> Illustrates the rider posture compared to a standard 26&quot; MTB, highlighting how the short rear-center makes manualing effortless.<br>• <strong>Build Quality:</strong> Details the Kinesis USA aerospace 7005 aluminum build and heavy-duty gussets.",
-            3: "<strong>BiCycle Club Magazine — Fork & Frame Details (Page 3)</strong><br><br>• <strong>Front End:</strong> Close-up of fork and custom head tube reinforcement designed to absorb brutal urban and trail impacts.",
-            4: "<strong>BiCycle Club Magazine — Article Text & Layout (Page 4)</strong><br><br>• <strong>Text Translation:</strong> Explains how David and Phil combined 13+ years of BMX roots with custom frame geometry because they couldn't find what they wanted to ride on the market.<br>• <strong>Downhill Trial:</strong> Mentions entering the prototype into a Northern California downhill race against full-suspension motorbikes and finishing in a strong position.",
-            5: "<strong>Designers' Workshop Vol. 16, No. 106 (Page 5)</strong><br><br>• <strong>Title:</strong> <em>'Bad Boy Designers Dream Bikes'</em> by Kunie Sento.<br>• <strong>Photo:</strong> David Duval-Smith and Philip Lord posing in front of the <em>deluxe</em> creative space in Nishi-Azabu, Tokyo.",
-            6: "<strong>Designers' Workshop — Interview & Philosophy (Page 6)</strong><br><br>• <strong>Quote:</strong> David explains the motivation behind Namaiki Cycles: <em>'If it is interesting, do it and avoid the restrictions of graphic design alone. We wanted a bike that rode like a BMX because we're getting older and MTBs are easier on the body.'</em>",
-            7: "<strong>Designers' Workshop — Studio Infrastructure & Projects (Page 7)</strong><br><br>• <strong>Studio Culture:</strong> Details the 200m² warehouse space shared with 15 creators, and how David ran <em>Namaiki Design</em> alongside Mike Frank separately from the bicycle venture.",
-            8: "<strong>clic.ex Magazine Feature #77 (Page 8)</strong><br><br>• <strong>Product Spotlight:</strong> Showcases the Namaiki DS-Y frame (¥140,000) and Yoroshiku jerseys (¥12,800).<br>• <strong>Catchphrase:</strong> <em>'Cool, Easy to jump, Strong.'</em> Emphasizes 14 years of friendship and riding.",
-            9: "<strong>MTB Magazine Japan — Messenger Bikes & Rodo Preview (Page 9)</strong><br><br>• <strong>Feature:</strong> Profiles Tokyo messengers and transitions into Philip Lord's new brand <strong>Rodo Racing</strong>, previewing early drawings of the RODO LO-8 full-suspension downhill prototype.",
-            10: "<strong>GOD Design Magazine — Feature Spread (Page 10)</strong><br><br>• <strong>Headline:</strong> <em>'There is Design in the Streets.'</em><br>• <strong>Overview:</strong> Features detailed close-ups of the custom gussets, down-tube tattoo graphics ('Monmon'), and geometry breakdown for urban assault.",
-            11: "<strong>Designers' Workshop — Apparel & Team Feature (Page 11)</strong><br><br>• <strong>Creatives:</strong> Features portraits of David, Mike Frank, and collaborators at the <em>deluxe</em> workspace showcasing experimental apparel and design projects.",
-            12: "<strong>Sports Bicycle Catalog 2004 — Rodo Listing (Page 12)</strong><br><br>• <strong>Catalog Entry:</strong> Lists the 2004 Rodo line and collaborating designer models featuring Kinesis frames and custom RODO components.",
-            13: "<strong>MTB All Catalogue 2001 — Brand Directory (Page 13)</strong><br><br>• <strong>Catalog Entry:</strong> Official 2001 catalog listing for the Namaiki DS-Y frameset alongside international mountain bike brands like Muraca and Nicolai.",
-            14: "<strong>MTB Magazine Japan — DS-Y Test Ride & Review (Page 14)</strong><br><br>• <strong>Ride Impressions:</strong> Test riders Kenji and Hiroko evaluate the DS-Y demo build equipped with a Manitou Supernova fork and 3.0-inch tires, praising its snappy manual acceleration and play-bike handling.",
-            15: "<strong>Fat Tire Trader / US Print Ads (Page 15)</strong><br><br>• <strong>American Advertising:</strong> US print advertisements showcasing the Namaiki Cycles DS-Y frameset ('BMX feel in a mountain bike frame. Handmade in Oregon/USA' distribution promo).",
-            16: "<strong>Fat Tire Trader — EP-X / Namaiki Ad Spread (Page 16)</strong><br><br>• <strong>Print Distribution:</strong> Additional catalog and trading pages featuring US distribution channels for niche high-performance mountain bike framesets."
+            1: "<strong>BiCycle Club Magazine (Page 1)</strong><br><br>• <strong>Headline:</strong> <em>'The One Bike to Stand Out on the Street — Street Battle Bike.'</em><br>• <strong>Overview:</strong> Introduces the hybrid 26-inch front / 24-inch rear hardtail developed in Tokyo by 11-year riding partners David Duval-Smith and Philip Lord.<br>• <strong>Text Excerpt:</strong> <em>'We built this bike because we wanted to ride a fun MTB that was easy to pull off tricks and stand out on the street or trail. Shifting weight to the rear is super easy!'</em>",
+            
+            2: "<strong>BiCycle Club Magazine — Technical Breakdown (Page 2)</strong><br><br>• <strong>Short Rear Center:</strong> Shortening the chainstay (crank axle to rear axle) makes lifting the front wheel effortless.<br>• <strong>Kinesis USA Build:</strong> Built from 7005 aluminum at Kinesis USA featuring custom gussets engineered to dissipate force without welding top/bottom seams.<br>• <strong>Fork Geometry:</strong> Optimized for 3.5 to 5-inch forks (such as the RockShox SID 100).<br>• <strong>Monmon Graphics:</strong> Japanese tattoo-inspired graphics on the down tube; offered in Black, Gray, and Hanakuso Green.",
+            
+            3: "<strong>BiCycle Club Magazine — Front End Detail (Page 3)</strong><br><br>• <strong>Front Triangle Gusseting:</strong> Heavy-duty head tube reinforcement designed to withstand aggressive street and dirt jump abuse.<br>• <strong>Yoroshiku Jersey:</strong> Custom thick-nylon racing jersey with telemetry/telepathy logo design (¥20,000 estimated).",
+            4: "<strong>BiCycle Club Magazine — Article Text (Page 4)</strong><br><br>• <strong>Concept:</strong> A hybrid merging mountain bike capabilities with the agility of a BMX cruiser.<br>• <strong>Performance Note:</strong> Highlights high placement in downhill races despite its hardtail setup.<br>• <strong>Contact Info:</strong> Listed original Tokyo contact number (03-5575-2456) and pricing (~¥130,000 frame estimate).",
+            
+            5: "<strong>Designers' Workshop Vol. 16, No. 106 (Page 5)</strong><br><br>• <strong>Title:</strong> <em>'Bad Boy Designers Dream Bikes'</em> by Kunie Sento.<br>• <strong>Featured Creators:</strong> David Duval-Smith (graphic designer at <em>Namaiki Design</em>) and Philip Lord (Art Director at Wieden+Kennedy Tokyo creating Nike ads).<br>• <strong>Photo Location:</strong> Posing with their custom DS-Y builds in front of the <em>deluxe</em> space in Tokyo.",
+            
+            6: "<strong>Designers' Workshop — Interview (Page 6)</strong><br><br>• <strong>Origin:</strong> Created after Dave and Phil realized no commercial bike matched what they wanted to ride.<br>• <strong>Philosophy:</strong> <em>'If it's interesting, do it... We wanted a bike that rode like a BMX because MTBs are easier on the body as you get older. Once you get used to this feel, other bikes feel stiff.'</em><br>• <strong>Fabrication Journey:</strong> Recounts working through initial frame fabrication iterations in Tokyo before moving to small-batch production.",
+            
+            7: "<strong>Designers' Workshop — Agency & Studio Context (Page 7)</strong><br><br>• <strong>Entity Separation:</strong> Details the 200m² warehouse space in Azabu-Juban shared by 15 creators. Clarifies that David ran <em>Namaiki Design</em> with Mike Frank separately from the bike project with Phil.<br>• <strong>Organic Growth:</strong> <em>'We don't sell our design work directly—people come to us because the projects are fun.'</em>",
+            
+            8: "<strong>clic.ex Magazine Feature #77 (Page 8)</strong><br><br>• <strong>Product Specs:</strong> Namaiki DS-Y Frame (¥140,000) and Yoroshiku Jerseys (¥12,800).<br>• <strong>Catchphrase:</strong> <em>'Cool, Easy to jump, Strong.'</em><br>• <strong>Roots:</strong> Highlights 14 years of shared BMX riding, friendship, and jumping between Phil and Dave.",
+            
+            9: "<strong>MTB Magazine Japan — Messenger Feature & Rodo Preview (Page 9)</strong><br><br>• <strong>Transition:</strong> Features Tokyo messenger custom bikes and introduces Philip Lord's evolution into <strong>Rodo Racing</strong>.<br>• <strong>The RODO LO-8:</strong> Previews the full-suspension downhill prototype (8 inches of travel, rising-rate linkage) engineered by Phil.",
+            
+            10: "<strong>GOD Design Magazine Spread (Page 10)</strong><br><br>• <strong>Title:</strong> <em>'There is Design in the Streets.'</em><br>• <strong>Overview:</strong> In-depth feature detailing the 26-inch front / 24-inch rear geometry, short chainstay, and 7000-series aluminum build.<br>• <strong>Quote:</strong> <em>'Even if the rider gives up, the frame never will.'</em> Notes the frame price of ~¥150,000.",
+            
+            11: "<strong>Designers' Workshop — Apparel & Studio Team (Page 11)</strong><br><br>• <strong>Creative Projects:</strong> Photos of David Duval-Smith, Mike Frank, and collaborators at the <em>deluxe</em> workspace showcasing custom apparel and studio design projects.",
+            
+            12: "<strong>Sports Bicycle Catalog 2004 — Rodo Listing (Page 12)</strong><br><br>• <strong>Catalog Entry:</strong> Rodo DS.C / LO-8 specification listing featuring Kinesis aluminum frames, RODO Bull Shit forks, Hubby Hubs, and Taco saddles designed by Philip Lord in collaboration with Wheel Works.",
+            
+            13: "<strong>MTB All Catalogue 2001 (Page 13)</strong><br><br>• <strong>Official Directory Listing:</strong> Highlights the Namaiki DS-Y Frame (¥140,000) created by Philip Lord and David Duval-Smith, emphasizing its BMX-like street agility.",
+            
+            14: "<strong>MTB Magazine Japan — DS-Y Test Ride & Review (Page 14)</strong><br><br>• <strong>Rider Review:</strong> Test riders Kenji and Hiroko test the demo build equipped with a Manitou X-Vert Supernova fork and Hayes 8-inch disc brakes.<br>• <strong>Verdict:</strong> Praises the instant initial stroke acceleration, stability in tight corners, and effortless manualing enabled by the 24-inch rear wheel.",
+            
+            15: "<strong>Fat Tire Trader / US Print Ads (Page 15)</strong><br><br>• <strong>American Print Ad:</strong> Feature ad in US cycling press for the <em>Namaiki Cycles DS-Y Frameset</em> — <em>'BMX feel in a mountain bike frame. 24&quot; rear. Stout. Handmade in Oregon, USA. Racing, jumping and urban assault.'</em>",
+            
+            16: "<strong>Fat Tire Trader — US Ad Directory (Page 16)</strong><br><br>• <strong>Distribution Archive:</strong> US print advertisement placement for the Namaiki DS-Y frameset alongside contemporary high-performance mountain bike brands."
         };
 
         function openLightbox(pageIndex) {
