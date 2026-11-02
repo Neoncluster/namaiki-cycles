@@ -98,22 +98,72 @@
                 <p class="text-slate-400 text-sm">Click any page thumbnail to view full-screen alongside its precise verbatim translation.</p>
             </header>
 
-            <!-- Grid of 16 Clickable Thumbnails -->
+            <!-- Explicit 16 Thumbnail Grid (Ensuring zero broken image paths) -->
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                <script>
-                    for (let i = 1; i <= 16; i++) {
-                        const pageNum = i <= 8 ? i.toString().padStart(2, '0') : (i === 9 ? '09_2' : (i === 10 ? '10_2' : (i === 11 ? '11_2' : (i === 12 ? '12_2' : (i === 13 ? '13_2' : (i === 14 ? '14_2' : (i === 15 ? '15_2' : '16_2')))))));
-                        const fileName = i <= 8 ? `Namaiki Cycles_Page_${pageNum}.jpg` : `Namaiki Cycles_Page_${pageNum}.jpg`;
-                        document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(${i})">
-                                <img src="Namaiki Cycles_Page_${pageNum}.jpg" alt="Archive Page ${i}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                    <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page ${i}</span>
-                                </div>
-                            </div>
-                        `);
-                    }
-                </script>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(1)">
+                    <img src="Namaiki Cycles_Page_01.jpg" alt="Archive Page 1" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 1</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(2)">
+                    <img src="Namaiki Cycles_Page_02.jpg" alt="Archive Page 2" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 2</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(3)">
+                    <img src="Namaiki Cycles_Page_03.jpg" alt="Archive Page 3" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 3</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(4)">
+                    <img src="Namaiki Cycles_Page_04.jpg" alt="Archive Page 4" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 4</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(5)">
+                    <img src="Namaiki Cycles_Page_05.jpg" alt="Archive Page 5" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 5</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(6)">
+                    <img src="Namaiki Cycles_Page_06.jpg" alt="Archive Page 6" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 6</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(7)">
+                    <img src="Namaiki Cycles_Page_07.jpg" alt="Archive Page 7" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 7</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(8)">
+                    <img src="Namaiki Cycles_Page_08.jpg" alt="Archive Page 8" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 8</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(9)">
+                    <img src="Namaiki Cycles_Page_09_2.jpg" alt="Archive Page 9" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 9</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(10)">
+                    <img src="Namaiki Cycles_Page_10_2.jpg" alt="Archive Page 10" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 10</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(11)">
+                    <img src="Namaiki Cycles_Page_11_2.jpg" alt="Archive Page 11" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 11</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(12)">
+                    <img src="Namaiki Cycles_Page_12_2.jpg" alt="Archive Page 12" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 12</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(13)">
+                    <img src="Namaiki Cycles_Page_13_2.jpg" alt="Archive Page 13" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 13</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(14)">
+                    <img src="Namaiki Cycles_Page_14_2.jpg" alt="Archive Page 14" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 14</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(15)">
+                    <img src="Namaiki Cycles_Page_15_2.jpg" alt="Archive Page 15" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 15</span></div>
+                </div>
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(16)">
+                    <img src="Namaiki Cycles_Page_16_2.jpg" alt="Archive Page 16" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"><span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page 16</span></div>
+                </div>
             </div>
         </section>
 
