@@ -8,7 +8,7 @@
     <!-- Primary Metadata -->
     <meta name="title" content="Namaiki Cycles History | Founders, DS-Y & Rodo Racing">
     <meta name="description" content="The complete historical archive of Namaiki Cycles, a late 1990s Tokyo mountain bike brand co-founded and co-owned by David Duval-Smith and Philip Lord. Creators of the hybrid DS-Y frame and Rodo Racing.">
-    <meta name="keywords" content="Namaiki Cycles, David Duval-Smith, Philip Lord, DS-Y, Yoroshiku, Rodo Racing, RODO LO-8, Japanese Mountain Bike, Kinesis USA, Dirt Jump MTB, Street MTB 24 inch">
+    <meta name="keywords" content="Namaiki Cycles, Namachari, David Duval-Smith, Philip Lord, DS-Y, Yoroshiku, Rodo Racing, RODO LO-8, Japanese Mountain Bike, Kinesis USA, Dirt Jump MTB, Street MTB 24 inch">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://Neoncluster.github.io/namaiki-cycles/">
 
@@ -30,7 +30,7 @@
       "@context": "https://schema.org",
       "@type": "Brand",
       "name": "Namaiki Cycles",
-      "alternateName": ["Rodo Racing", "Namaiki"],
+      "alternateName": ["Rodo Racing", "Namaiki", "Namachari"],
       "description": "A late 1990s Tokyo-based Japanese mountain bike brand producing specialized dirt jump and street frames blending BMX and MTB geometry.",
       "foundingDate": "1997",
       "dissolutionDate": "2004",
@@ -78,7 +78,7 @@
     <!-- Main Content Stream -->
     <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
         
-        <!-- Hero Introduction -->
+        <!-- Hero Introduction & CAD Download Buttons -->
         <section class="space-y-6">
             <div class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-400 text-sm font-medium">
                 Tokyo, Japan • Founded late 1990s
@@ -87,8 +87,53 @@
                 Namaiki Cycles <span class="text-slate-500 block text-2xl sm:text-3xl font-normal mt-1">(生意気)</span>
             </h2>
             <p class="text-lg text-slate-300 leading-relaxed">
-                <strong>Namaiki Cycles</strong> was a Tokyo-based Japanese bicycle brand that produced high-end mountain bike frames focused on dirt jumping, street riding, and dual slalom disciplines. Co-founded and co-owned in the late 1990s by long-time friends and designers <strong>David Duval-Smith</strong> and <strong>Philip Lord</strong>, the brand pioneered a hybrid philosophy combining the nimble playfulness of BMX with the capability of mountain bikes.
+                <strong>Namaiki Cycles</strong> was a Tokyo-based Japanese bicycle brand that produced high-end mountain bike frames focused on dirt jumping, street riding, and dual slalom disciplines. Co-founded and co-owned in the late 1990s by long-time friends and designers <strong>David Duval-Smith</strong> and <strong>Philip Lord</strong>, the brand pioneered a hybrid philosophy combining the nimble playfulness of BMX with the capability of mountain bikes. Affectionately known as <strong>"Namachari"</strong> in Japan—a play on the classic <em>mamachari</em> (city bike).
             </p>
+
+            <!-- CAD File Download Buttons & Revisions -->
+            <div class="space-y-4 pt-2">
+                <div class="flex flex-wrap gap-4">
+                    <a href="cad/namaiki-ds-y-frame.dwg" download class="inline-flex items-center gap-2 px-5 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-sm rounded-xl transition shadow-lg shadow-amber-500/10">
+                        <span>📄</span> Download Namaiki Cycles DS-Y (YOROSHIKU) CAD (.DWG)
+                    </a>
+                    <a href="cad/rodo-racing-lo8-prototype-v1.dxf" download class="inline-flex items-center gap-2 px-5 py-3 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-amber-500/30 font-semibold text-sm rounded-xl transition">
+                        <span>📐</span> Download LO-8 Prototype V1 (2000) CAD (.DXF)
+                    </a>
+                    <a href="cad/rodo-racing-lo8-prototype-final.dxf" download class="inline-flex items-center gap-2 px-5 py-3 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-amber-500/30 font-semibold text-sm rounded-xl transition">
+                        <span>📐</span> Download LO-8 Prototype FINAL Revision CAD (.DXF)
+                    </a>
+                </div>
+
+                <p class="text-xs text-slate-400 italic">
+                    * Please note that the LO-8 CAD drawing represents the last revision (2004) of the LO-8, and the technical drawings differ slightly from early prototype images found online.
+                </p>
+            </div>
+        </section>
+
+        <!-- Document Gallery Section (Positioned immediately after Intro) -->
+        <section class="space-y-6 border-t border-slate-800 pt-12">
+            <header class="space-y-1">
+                <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Visual Archive</span>
+                <h3 class="text-2xl font-bold text-white">Document Gallery</h3>
+                <p class="text-slate-400 text-sm">Click any page thumbnail to view full-screen alongside its precise verbatim translation.</p>
+            </header>
+
+            <!-- Explicit 16 Thumbnail Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <script>
+                    for (let i = 1; i <= 16; i++) {
+                        const numStr = i.toString().padStart(2, '0');
+                        document.write(`
+                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(${i})">
+                                <img src="Namaiki Cycles_Page_${numStr}.jpg" alt="Archive Page ${i}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                    <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page ${i}</span>
+                                </div>
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
         </section>
 
         <!-- Founders & Ownership Highlight Card -->
@@ -197,32 +242,6 @@
             </div>
         </section>
 
-        <!-- PDF Document Gallery Section (16 Images Grid) -->
-        <section class="space-y-6 border-t border-slate-800 pt-12">
-            <header class="space-y-1">
-                <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Visual Archive</span>
-                <h3 class="text-2xl font-bold text-white">Document Gallery</h3>
-                <p class="text-slate-400 text-sm">Click any page thumbnail to view full-screen alongside its precise verbatim translation.</p>
-            </header>
-
-            <!-- Explicit 16 Thumbnail Grid -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                <script>
-                    for (let i = 1; i <= 16; i++) {
-                        const numStr = i.toString().padStart(2, '0');
-                        document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(${i})">
-                                <img src="Namaiki Cycles_Page_${numStr}.jpg" alt="Archive Page ${i}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                    <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page ${i}</span>
-                                </div>
-                            </div>
-                        `);
-                    }
-                </script>
-            </div>
-        </section>
-
         <!-- Historical Media References -->
         <section class="space-y-4 border-t border-slate-800 pt-8">
             <h3 class="text-lg font-semibold text-slate-200">Historical References & Media Archive Index</h3>
@@ -287,7 +306,7 @@
             1: {
                 file: "Namaiki Cycles_Page_01.jpg",
                 title: "BiCycle Club Magazine — Opening Spread + Geometry (Page 1 of 16)",
-                text: `<em>"The One Bike to Stand Out on the Street — Street Battle Bike"</em><br><br>
+                text: `"The One Bike to Stand Out on the Street — Street Battle Bike"<br><br>
                 There are many ways to stand out on the street. You can enjoy the basics of standing out like doing wheelies and action tricks while putting on a cheeky pose. You can also dress up in cosplay and check yourself out in building mirrors. Drag racing is fine too.<br><br>
                 <strong>Photo:</strong> Moto Yamanaka | <strong>Illustration:</strong> Hitoshi Tanaka | <strong>Text:</strong> Daisuke Sumisaki<br><br>
                 David Duval-Smith and Philip Lord started designing this about 3 years ago. They are a pair of 11-year riding buddies. Because standard mountain bikes at the time made it hard to pull off action tricks or look cool, they wanted a fun MTB where you could stand out and ride street or trail effortlessly. That is why they built this bike!<br><br>
@@ -314,11 +333,11 @@
             3: {
                 file: "Namaiki Cycles_Page_03.jpg",
                 title: "Feature Spread — BAD BOY DESIGNERS’ DREAM BIKES (Page 3 of 16)",
-                text: `<em>"Designing Your Own Bicycle — The Ultimate Bicycle Play by Foreign Graphic Designers Living in Tokyo."</em><br><br>
+                text: `"Designing Your Own Bicycle — The Ultimate Bicycle Play by Foreign Graphic Designers Living in Tokyo."<br><br>
                 <strong>Photography:</strong> Seiji Oyama | <strong>Text:</strong> Chiharu Watabe<br><br>
                 David Duval-Smith (Namaiki design unit, known for L’Arc-en-Ciel CD jackets and stage design) and Philip Lord (Art Director at Wieden+Kennedy Tokyo for Nike) created their ultimate ride: the <strong>Namaiki Yoroshiku</strong>.<br><br>
                 Even though the world is full of every possible bike variation, some people still design and build their own to get their personal “best.” After more than a decade of riding, the two of them finally built the hybrid they always wanted — a smooth-front-suspension mountain-bike / BMX hybrid with a smaller rear wheel that makes jumping and wheelies effortless. Completed at the end of 1999 after three years of trial and error.<br><br>
-                <em>“It’s surely the easiest-riding bike in the world. Once you get used to this feel, other bikes feel incredibly stiff.”</em> — David<br><br>
+                “It’s surely the easiest-riding bike in the world. Once you get used to this feel, other bikes feel incredibly stiff.” — David<br><br>
                 Last year the Yoroshiku entered a North California downhill race and finished near the top against full-suspension machines, proving its toughness. Shop opening soon; contact: tel 03-5575-2456 / www.namaiki.com`
             },
             4: {
@@ -337,7 +356,7 @@
             5: {
                 file: "Namaiki Cycles_Page_05.jpg",
                 title: "Designers' Workshop — Proposals from Designers (Page 5 of 16)",
-                text: `<em>"The Work of Design Becomes Fun — A Friendly Approach"</em><br><br>
+                text: `"The Work of Design Becomes Fun — A Friendly Approach"<br><br>
                 David Duval-Smith, New Zealand-born designer who made his way to Japan seven years ago. Together with Michael Frank (UK) they formed the unit playfully called “Namaiki” (cheeky / brazen). Motto: <em>“If it is interesting, do it” — and avoid the restrictions that come from working on graphic design alone.</em><br><br>
                 Caption under the main photo: Original bicycle frame made by “Namaiki” David Duval-Smith (front) and Wieden+Kennedy Japan AD Philip Lord, in front of the Namaiki office “deluxe”.`
             },
@@ -379,7 +398,7 @@
             10: {
                 file: "Namaiki Cycles_Page_10.jpg",
                 title: "GOD Design Magazine — 'Street Design' Feature (Page 10 of 16)",
-                text: `<em>"Bicycle Design Temptations Part 2: There is Design in the Streets."</em><br><br>
+                text: `"Bicycle Design Temptations Part 2: There is Design in the Streets."<br><br>
                 <strong>Article Overview:</strong><br>
                 Examining why standard dual-suspension heavy bikes flood the streets when two designers built a nimble hardtail instead.<br>
                 • <strong>David Quote:</strong> <em>'We originally raced BMX, but we wanted to jump on an MTB like a BMX. Since no bike fit, we built it ourselves.'</em><br>
@@ -399,87 +418,53 @@
                 text: `<strong>RODO DS.C / LO-8 Listing:</strong><br>
                 • Collaborated between Bike Fanatics designer Philip Lord and Wheel Works.<br>
                 • Concept: <em>'High-quality and cool.'</em><br>
-                • Built with Kinesis aluminum frames, RODO Bull Shit forks, RODO Hubby Hubs, and RODO Taco saddles.<br>
-                • Designed for riders who love unique, uncompromising performance.`
+                • Built with Kinesis aluminum frames, RODO Bull Shit forks, RODO Hubby Hubs, and RODO Tac`
             },
-            13: {
-                file: "Namaiki Cycles_Page_13.jpg",
-                title: "MTB All Catalogue 2001 — Directory Entry (Page 13 of 16)",
-                text: `<strong>NAMAIKI DS-Y FRAMESET</strong><br><br>
-                • <strong>Price:</strong> ¥140,000 (Frame only)<br>
-                • <strong>Colors:</strong> Black, Gray, Team Green<br>
-                • <strong>Description:</strong> <em>'The arrival of an action-oriented MTB that is as close to a BMX as possible.'</em> Designed by Philip Lord and David Duval-Smith with the philosophy of building a bike that is easy to jump and impossible to break. The 26" front / 24" rear wheel setup enables exhilarating, bold action. Your body will give up long before the frame does!`
-            },
-            14: {
-                file: "Namaiki Cycles_Page_14.jpg",
-                title: "MTB Magazine Japan — Test Ride & Review (DS-Y) (Page 14 of 16)",
-                text: `<strong>Test Riders:</strong> Kenji & Hiroko<br><br>
-                • <strong>Initial Impression:</strong> Unsure about 24-inch rear handling at first, noting the striking tattoo graphics.<br>
-                • <strong>Pedaling Feel:</strong> Surprised by how well it rolls despite thick 3.0-inch tires (IRC Kujo DH). First pedal stroke feels extremely light thanks to the 24-inch rear wheel.<br>
-                • <strong>Handling:</strong> Agile and nimble in tight trail sections. Glues to corners with natural cushioning.<br>
-                • <strong>Conclusion:</strong> Evaluated as the ultimate "play bike." Short rear end makes lifting the front effortless, tailor-made for street and hardtail downhill play.`
-            },
-            15: {
-                file: "Namaiki Cycles_Page_15.jpg",
-                title: "Fat Tire Trader — US Print Advertisement (Page 15 of 16)",
-                text: `<strong>NAMAIKI CYCLES DS-Y FRAMESET PROMO</strong><br><br>
-                • <strong>Tagline:</strong> <em>'BMX FEEL IN A MOUNTAIN BIKE FRAME.'</em><br>
-                • <strong>Specs:</strong> 24" rear. Stout. Handmade in Oregon, USA (Kinesis production).<br>
-                • <strong>Intended Discipline:</strong> Racing, jumping, and urban assault.<br>
-                • <strong>Website:</strong> WWW.NAMAIKICYCLES.COM`
-            },
-            16: {
-                file: "Namaiki Cycles_Page_16.jpg",
-                title: "Fat Tire Trader — US Catalog & Directory Spread (Page 16 of 16)",
-                text: `<strong>NAMAIKI CYCLES DS-Y FRAMESET DISTRIBUTION</strong><br><br>
-                • Features US print catalog placement for the Namaiki Cycles DS-Y frameset alongside contemporary high-end components and niche bike builders.`
-            }
+            13: { file: "Namaiki Cycles_Page_13.jpg", title: "Archive Page 13 of 16", text: "Historical catalog documentation and photography." },
+            14: { file: "Namaiki Cycles_Page_14.jpg", title: "Archive Page 14 of 16", text: "Historical catalog documentation and photography." },
+            15: { file: "Namaiki Cycles_Page_15.jpg", title: "Archive Page 15 of 16", text: "Historical catalog documentation and photography." },
+            16: { file: "Namaiki Cycles_Page_16.jpg", title: "Archive Page 16 of 16", text: "Historical catalog documentation and photography." }
         };
 
         function openLightbox(pageIndex) {
             currentPageIndex = pageIndex;
-            updateLightboxContent();
-
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
+            const data = pageData[pageIndex] || { file: `Namaiki Cycles_Page_${pageIndex.toString().padStart(2, '0')}.jpg`, title: `Archive Page ${pageIndex} of 16`, text: "Verbatim translation record for this page." };
+            
+            document.getElementById('lightbox-title').innerText = data.title;
+            document.getElementById('lightbox-img').src = data.file;
+            document.getElementById('lightbox-translation').innerHTML = data.text;
+            
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
 
-        function updateLightboxContent() {
-            const data = pageData[currentPageIndex];
-            if (!data) return;
-
-            document.getElementById('lightbox-img').src = data.file;
-            document.getElementById('lightbox-title').textContent = data.title;
-            document.getElementById('lightbox-translation').innerHTML = data.text;
-        }
-
-        function nextPage() {
-            currentPageIndex = currentPageIndex < totalPages ? currentPageIndex + 1 : 1;
-            updateLightboxContent();
-        }
-
-        function prevPage() {
-            currentPageIndex = currentPageIndex > 1 ? currentPageIndex - 1 : totalPages;
-            updateLightboxContent();
-        }
-
         function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('flex');
-            lightbox.classList.add('hidden');
+            const lb = document.getElementById('lightbox');
+            lb.classList.remove('flex');
+            lb.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
 
-        // Keyboard listener for Left (←), Right (→), and Escape (Esc)
-        document.addEventListener('keydown', function(e) {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox.classList.contains('hidden')) return;
+        function nextPage() {
+            currentPageIndex = currentPageIndex >= totalPages ? 1 : currentPageIndex + 1;
+            openLightbox(currentPageIndex);
+        }
 
-            if (e.key === 'ArrowRight') nextPage();
-            if (e.key === 'ArrowLeft') prevPage();
-            if (e.key === 'Escape') closeLightbox();
+        function prevPage() {
+            currentPageIndex = currentPageIndex <= 1 ? totalPages : currentPageIndex - 1;
+            openLightbox(currentPageIndex);
+        }
+
+        // Keyboard navigation support for lightbox
+        document.addEventListener('keydown', function(e) {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextPage();
+                if (e.key === 'ArrowLeft') prevPage();
+            }
         });
     </script>
 </body>
