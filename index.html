@@ -70,7 +70,10 @@
     <!-- Header Section -->
     <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-wider text-amber-400 uppercase">Namaiki Cycles Archive</h1>
+            <div class="flex items-center gap-3">
+                <img src="namaikilogo.png" alt="Namaiki Logo" class="h-8 w-auto object-contain">
+                <h1 class="text-xl font-bold tracking-wider text-lime-400 uppercase">Namaiki Cycles Archive</h1>
+            </div>
             <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-400 rounded">1999s - 2004</span>
         </div>
     </header>
@@ -80,11 +83,13 @@
         
         <!-- Hero Introduction -->
         <section class="space-y-6">
-            <div class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-400 text-sm font-medium">
+            <div class="inline-block px-3 py-1 bg-lime-500/10 border border-lime-500/30 rounded-full text-lime-400 text-sm font-medium">
                 Tokyo, Japan • Founded late 1990s
             </div>
-            <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-                Namaiki Cycles <span class="text-slate-500 block text-2xl sm:text-3xl font-normal mt-1">(生意気)</span>
+            <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white flex items-center gap-4 flex-wrap">
+                <span>Namaiki Cycles</span>
+                <img src="namaikilogo.png" alt="Namaiki Logo" class="h-10 sm:h-12 w-auto object-contain inline-block">
+                <span class="text-slate-500 block text-2xl sm:text-3xl font-normal mt-1 w-full">(生意気)</span>
             </h2>
             <p class="text-lg text-slate-300 leading-relaxed">
                 <strong>Namaiki Cycles</strong> was a Tokyo-based Japanese bicycle brand that produced high-end mountain bike frames focused on dirt jumping, street riding, and dual slalom disciplines. Co-founded and co-owned in the late 1990s by long-time friends and designers <strong>David Duval-Smith</strong> and <strong>Philip Lord</strong>, the brand pioneered a hybrid philosophy combining the nimble playfulness of BMX with the capability of mountain bikes. Affectionately known as <strong>"Namachari"</strong> in Japan—a play on the classic <em>mamachari</em> (city bike).
@@ -94,7 +99,7 @@
         <!-- Document Gallery Section (Positioned right after Intro) -->
         <section class="space-y-6 border-t border-slate-800 pt-12">
             <header class="space-y-1">
-                <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Visual Archive</span>
+                <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Visual Archive</span>
                 <h3 class="text-2xl font-bold text-white">Document Gallery</h3>
                 <p class="text-slate-400 text-sm">Click any page thumbnail to view full-screen alongside its precise verbatim translation.</p>
             </header>
@@ -105,10 +110,10 @@
                     for (let i = 1; i <= 16; i++) {
                         const numStr = i.toString().padStart(2, '0');
                         document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox('doc', ${i})">
+                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-lime-400 transition" onclick="openLightbox('doc', ${i})">
                                 <img src="Namaiki Cycles_Page_${numStr}.jpg" alt="Archive Page ${i}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
                                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                    <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page ${i}</span>
+                                    <span class="text-xs font-mono bg-black/80 text-lime-400 px-2.5 py-1 rounded border border-lime-400/30">View Page ${i}</span>
                                 </div>
                             </div>
                         `);
@@ -118,9 +123,9 @@
         </section>
 
         <!-- Founders & Ownership Highlight Card -->
-        <section class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-amber-500/20 p-8 rounded-2xl space-y-6 shadow-xl">
+        <section class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-lime-500/20 p-8 rounded-2xl space-y-6 shadow-xl">
             <header class="space-y-1">
-                <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Leadership & Vision</span>
+                <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Leadership & Vision</span>
                 <h3 class="text-2xl font-bold text-white">Founders & Owners</h3>
             </header>
             
@@ -129,7 +134,7 @@
                 <div class="bg-slate-950/60 border border-slate-800 p-5 rounded-xl space-y-3">
                     <div>
                         <div class="text-lg font-semibold text-white">David Duval-Smith</div>
-                        <div class="text-xs font-mono text-amber-400">Co-Founder & Co-Owner</div>
+                        <div class="text-xs font-mono text-lime-400">Co-Founder & Co-Owner</div>
                     </div>
                     <ul class="text-slate-400 text-sm space-y-2 leading-relaxed">
                         <li>
@@ -145,7 +150,7 @@
                 <div class="bg-slate-950/60 border border-slate-800 p-5 rounded-xl space-y-3">
                     <div>
                         <div class="text-lg font-semibold text-white">Philip Lord</div>
-                        <div class="text-xs font-mono text-amber-400">Co-Founder & Co-Owner</div>
+                        <div class="text-xs font-mono text-lime-400">Co-Founder & Co-Owner</div>
                     </div>
                     <ul class="text-slate-400 text-sm space-y-2 leading-relaxed">
                         <li>
@@ -166,13 +171,13 @@
         <!-- Brand Details Grid -->
         <section class="grid sm:grid-cols-2 gap-6">
             <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-3">
-                <h3 class="text-amber-400 font-semibold text-lg">Name & Meaning</h3>
+                <h3 class="text-lime-400 font-semibold text-lg">Name & Meaning</h3>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     <em>Namaiki</em> (生意気) is a Japanese term meaning cheeky, saucy, impudent, or insolent—capturing the rebellious, fun-first ethos of the brand.
                 </p>
             </div>
             <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-3">
-                <h3 class="text-amber-400 font-semibold text-lg">Manufacturing & Build</h3>
+                <h3 class="text-lime-400 font-semibold text-lg">Manufacturing & Build</h3>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     Built from aerospace-grade <strong>7005 aluminum</strong> and manufactured at the renowned <strong>Kinesis USA</strong> factory, featuring heavy-duty gussets for extreme durability. Their catchphrase loosely translated to: <em class="text-slate-200">"Cool, Easy to jump, Strong."</em>
                 </p>
@@ -182,26 +187,26 @@
         <!-- Flagship Model: DS-Y -->
         <section class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
             <header class="space-y-2">
-                <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Flagship Model</span>
+                <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Flagship Model</span>
                 <h3 class="text-3xl font-bold text-white">The DS-Y Frame</h3>
                 <p class="text-slate-400 text-sm">Acronym for <em>Dual Slalom Yoroshiku</em></p>
             </header>
 
             <ul class="space-y-4 text-slate-300">
                 <li class="flex items-start gap-3">
-                    <span class="text-amber-400 mt-1">•</span>
+                    <span class="text-lime-400 mt-1">•</span>
                     <div>
                         <strong class="text-white">Hybrid Wheel Geometry:</strong> A radical departure from standard 26-inch mountain bikes of the era, engineered specifically with a <strong class="text-white">26-inch front wheel</strong> and a compact <strong class="text-white">24-inch rear wheel</strong> (or configured as a dedicated 24" setup).
                     </div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-amber-400 mt-1">•</span>
+                    <span class="text-lime-400 mt-1">•</span>
                     <div>
                         <strong class="text-white">Short Rear Center:</strong> Shortening the rear-center (crank axle to rear wheel axle) made manualing, bunny-hopping, and shifting rider weight behind the rear axle effortless.
                     </div>
                 </li>
                 <li class="flex items-start gap-3">
-                    <span class="text-amber-400 mt-1">•</span>
+                    <span class="text-lime-400 mt-1">•</span>
                     <div>
                         <strong class="text-white">Cultural & Media Impact:</strong> Featured extensively across prominent Japanese and international cycling publications—including <em>Bicycle Club Magazine</em>, <em>MTB Magazine Japan</em>, <em>clic.ex</em>, and <em>GOD Magazine</em>—complete with distinct Japanese tattoo-inspired graphics ("Monmon") on the down tube.
                     </div>
@@ -226,7 +231,7 @@
         <!-- New Photo Gallery Section (Positioned after Transition & Rodo Racing) -->
         <section class="space-y-6 border-t border-slate-800 pt-12">
             <header class="space-y-1">
-                <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Photo Archive</span>
+                <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Photo Archive</span>
                 <h3 class="text-2xl font-bold text-white">Namaiki & Rodo Photo Collection</h3>
                 <p class="text-slate-400 text-sm">Explore original photographs from the archive. Click any thumbnail to view full-size.</p>
             </header>
@@ -243,10 +248,10 @@
                     photoFiles.forEach((filename, index) => {
                         const num = index + 1;
                         document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox('photo', ${num})">
+                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-lime-400 transition" onclick="openLightbox('photo', ${num})">
                                 <img src="photos/${filename}" alt="Namaiki Archive Photo ${num}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
                                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                    <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Photo ${num}</span>
+                                    <span class="text-xs font-mono bg-black/80 text-lime-400 px-2.5 py-1 rounded border border-lime-400/30">View Photo ${num}</span>
                                 </div>
                             </div>
                         `);
@@ -256,24 +261,24 @@
         </section>
 
         <!-- CAD PDF Archive Links & Usage Rights Section -->
-        <section class="space-y-4 bg-slate-900/60 border border-amber-500/20 p-8 rounded-2xl">
+        <section class="space-y-4 bg-slate-900/60 border border-lime-500/20 p-8 rounded-2xl">
             <h3 class="text-xl font-bold text-white">CAD Archive Downloads</h3>
             
             <!-- Usage Rights Notice placed above the buttons -->
-            <div class="text-xs text-amber-400/90 font-mono bg-slate-950/80 p-4 rounded-xl border border-amber-500/20 space-y-1">
-                <strong class="text-amber-400 block uppercase tracking-wider">Usage Rights:</strong>
+            <div class="text-xs text-lime-400/90 font-mono bg-slate-950/80 p-4 rounded-xl border border-lime-500/20 space-y-1">
+                <strong class="text-lime-400 block uppercase tracking-wider">Usage Rights:</strong>
                 <p>Licensed for Personal & Non-Commercial Use Only. All Commercial, Production, and Tradename Rights Reserved by Philip Lord / Namaiki Cycles.</p>
             </div>
 
             <!-- Consistent PDF View Buttons linked to GitHub Blob Viewers with properly encoded parentheses -->
             <div class="flex flex-col gap-3 pt-2">
-                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/DS-Y%20%28yoroshiku%29%20CAD%20by%20Philip%20Lord%20and%20David%20Duval-Smith.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-800 hover:border-amber-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
+                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/DS-Y%20%28yoroshiku%29%20CAD%20by%20Philip%20Lord%20and%20David%20Duval-Smith.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
                     <span class="text-base">📐</span> View Namaiki Cycles DS-Y (yoroshiku) CAD (.PDF)
                 </a>
-                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20%28v1%29%20by%20Namaiki%20Cycles_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-800 hover:border-amber-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
+                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20%28v1%29%20by%20Namaiki%20Cycles_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
                     <span class="text-base">📐</span> View Namaiki Cycles / RODO Racing LO-8 Prototype V1 (2000) (.PDF)
                 </a>
-                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20by%20Namaiki%20Cycles%3ARODO%20Racing_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-800 hover:border-amber-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
+                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20by%20Namaiki%20Cycles%3ARODO%20Racing_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
                     <span class="text-base">📐</span> View Namaiki Cycles / RODO Racing LO-8 Prototype FINAL Revision (.PDF)
                 </a>
             </div>
@@ -283,9 +288,9 @@
         <section class="space-y-4 border-t border-slate-800 pt-8">
             <h3 class="text-lg font-semibold text-slate-200">Historical References & Media Archive Index</h3>
             <ol class="space-y-2 text-xs text-slate-400 font-mono list-decimal pl-4">
-                <li><a href="https://www.pinkbike.com/news/article1790.html" target="_blank" rel="noopener" class="hover:underline text-amber-400">Pinkbike (Dec 2003): "RODO Shows Spyphoto"</a> - Coverage of the RODO LO-8 downhill frame prototype.</li>
-                <li><a href="https://web.archive.org/web/20050308182919/http://www.rodoracing.com/" target="_blank" rel="noopener" class="hover:underline text-amber-400">Wayback Machine: RODORACING.COM</a> - Official Rodo Racing relaunch and announcement archive.</li>
-                <li><a href="https://web.archive.org/web/20030411125346/http://www.namaikicycles.com/american/Frameset.html" target="_blank" rel="noopener" class="hover:underline text-amber-400">Wayback Machine: NAMAIKICYCLES.COM</a> - Original brand site detailing Dave and Phil's 13+ year BMX roots.</li>
+                <li><a href="https://www.pinkbike.com/news/article1790.html" target="_blank" rel="noopener" class="hover:underline text-lime-400">Pinkbike (Dec 2003): "RODO Shows Spyphoto"</a> - Coverage of the RODO LO-8 downhill frame prototype.</li>
+                <li><a href="https://web.archive.org/web/20050308182919/http://www.rodoracing.com/" target="_blank" rel="noopener" class="hover:underline text-lime-400">Wayback Machine: RODORACING.COM</a> - Official Rodo Racing relaunch and announcement archive.</li>
+                <li><a href="https://web.archive.org/web/20030411125346/http://www.namaikicycles.com/american/Frameset.html" target="_blank" rel="noopener" class="hover:underline text-lime-400">Wayback Machine: NAMAIKICYCLES.COM</a> - Original brand site detailing Dave and Phil's 13+ year BMX roots.</li>
                 <li>Japanese Print Publications: <em>Bicycle Club Magazine</em> (1999/2000), <em>MTB Magazine Japan</em> (2001), <em>clic.ex Magazine</em> (#77), <em>GOD Magazine</em>, <em>MTB All Catalog (2001/2002/2004)</em>, and <em>Designers' Workshop</em> (Vol. 16, No. 106).</li>
             </ol>
         </section>
@@ -298,14 +303,14 @@
         
         <!-- Tiny Ownership Footnote -->
         <p class="max-w-2xl mx-auto text-[10px] text-slate-600 leading-tight">
-            * <strong>Historical Record & Ownership Clarification:</strong> While third-party individuals have previously claimed ownership of the brand online, Namaiki Cycles was never sold, transferred, or co-owned by a 3rd party interest. Sole equity, brand ownership, and intellectual property remained exclusively with founders David Duval-Smith and Philip Lord throughout the company's existence.
+            * <strong>Historical Record & Ownership Clarification:</strong> While third-party individual Brad Hodges has previously claimed ownership of the brand online, Namaiki Cycles was never sold, transferred, or co-owned by Hodges. He was briefly engaged on a contract basis strictly to assist with liaison and communications with the Kinesis USA manufacturing facility during production. Sole equity, brand ownership, and intellectual property remained exclusively with founders David Duval-Smith and Philip Lord throughout the company's existence.
         </p>
     </footer>
 
     <!-- Interactive Lightbox Modal Overlay with Left/Right Navigation -->
     <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex-col p-4 md:p-6 overflow-y-auto">
         <div class="flex justify-between items-center mb-4 max-w-6xl w-full mx-auto">
-            <h4 id="lightbox-title" class="text-amber-400 font-mono text-sm md:text-base font-semibold"></h4>
+            <h4 id="lightbox-title" class="text-lime-400 font-mono text-sm md:text-base font-semibold"></h4>
             
             <div class="flex items-center gap-2">
                 <button onclick="prevItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Previous (Left Arrow)">← Prev</button>
@@ -316,19 +321,19 @@
         
         <div id="lightbox-body-container" class="max-w-6xl w-full mx-auto my-auto flex justify-center items-center relative">
             <!-- Left Arrow Button Overlay -->
-            <button onclick="prevItem()" class="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition z-10">❮</button>
+            <button onclick="prevItem()" class="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-lime-400 text-3xl font-mono p-2 transition z-10">❮</button>
 
             <!-- Image/Content Panel -->
             <div id="lightbox-main-panel" class="w-full flex justify-center">
                 <img id="lightbox-img" src="" alt="Archive Item" class="max-w-full max-h-[80vh] object-contain rounded border border-slate-800 shadow-2xl">
                 <div id="lightbox-translation-wrap" class="w-full md:w-1/2 bg-slate-900 border border-slate-800 rounded-xl p-6 text-slate-300 text-sm overflow-y-auto max-h-[75vh] space-y-4 hidden">
-                    <span class="text-xs font-mono uppercase tracking-widest text-amber-400 block border-b border-slate-800 pb-2">Translation</span>
+                    <span class="text-xs font-mono uppercase tracking-widest text-lime-400 block border-b border-slate-800 pb-2">Translation</span>
                     <div id="lightbox-translation" class="leading-relaxed space-y-3"></div>
                 </div>
             </div>
 
             <!-- Right Arrow Button Overlay -->
-            <button onclick="nextItem()" class="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition z-10">❯</button>
+            <button onclick="nextItem()" class="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-lime-400 text-3xl font-mono p-2 transition z-10">❯</button>
         </div>
     </div>
 
