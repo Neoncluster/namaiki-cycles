@@ -71,7 +71,7 @@
     <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-xl font-bold tracking-wider text-amber-400 uppercase">Namaiki Cycles Archive</h1>
-            <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-400 rounded">1997s - 2004</span>
+            <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-400 rounded">1999s - 2004</span>
         </div>
     </header>
 
@@ -96,7 +96,7 @@
             <header class="space-y-1">
                 <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Visual Archive</span>
                 <h3 class="text-2xl font-bold text-white">Document Gallery</h3>
-                <p class="text-slate-400 text-sm">Click any page thumbnail to view full-screen alongside Japanese to English translations.</p>
+                <p class="text-slate-400 text-sm">Click any page thumbnail to view full-screen alongside its precise verbatim translation.</p>
             </header>
 
             <!-- Explicit 16 Thumbnail Grid -->
@@ -105,7 +105,7 @@
                     for (let i = 1; i <= 16; i++) {
                         const numStr = i.toString().padStart(2, '0');
                         document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox(${i})">
+                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox('doc', ${i})">
                                 <img src="Namaiki Cycles_Page_${numStr}.jpg" alt="Archive Page ${i}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
                                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                                     <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Page ${i}</span>
@@ -223,7 +223,39 @@
             </div>
         </section>
 
-        <!-- CAD PDF Archive Links & Usage Rights Section (Placed below frames/models) -->
+        <!-- New Photo Gallery Section (Positioned after Transition & Rodo Racing) -->
+        <section class="space-y-6 border-t border-slate-800 pt-12">
+            <header class="space-y-1">
+                <span class="text-amber-400 font-mono text-xs uppercase tracking-widest">Photo Archive</span>
+                <h3 class="text-2xl font-bold text-white">Namaiki & Rodo Photo Collection</h3>
+                <p class="text-slate-400 text-sm">Explore original photographs from the archive. Click any thumbnail to view full-size.</p>
+            </header>
+
+            <!-- Explicit 14 Photo Thumbnail Grid from 'photos/' subfolder -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <script>
+                    const photoFiles = [
+                        "Namaiki_01.JPG", "Namaiki_02.jpg", "Namaiki_03.JPG", "Namaiki_04.jpg",
+                        "Namaiki_05.jpg", "Namaiki_06.jpg", "Namaiki_07.jpg", "Namaiki_08.JPG",
+                        "Namaiki_09.jpg", "Namaiki_10.jpg", "Namaiki_11.JPG", "Namaiki_12.JPG",
+                        "Namaiki_13.jpg", "Namaiki_14.jpg"
+                    ];
+                    photoFiles.forEach((filename, index) => {
+                        const num = index + 1;
+                        document.write(`
+                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-amber-400 transition" onclick="openLightbox('photo', ${num})">
+                                <img src="photos/${filename}" alt="Namaiki Archive Photo ${num}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                    <span class="text-xs font-mono bg-black/80 text-amber-400 px-2.5 py-1 rounded border border-amber-400/30">View Photo ${num}</span>
+                                </div>
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </section>
+
+        <!-- CAD PDF Archive Links & Usage Rights Section -->
         <section class="space-y-4 bg-slate-900/60 border border-amber-500/20 p-8 rounded-2xl">
             <h3 class="text-xl font-bold text-white">CAD Archive Downloads</h3>
             
@@ -233,11 +265,11 @@
                 <p>Licensed for Personal & Non-Commercial Use Only. All Commercial, Production, and Tradename Rights Reserved by Philip Lord / Namaiki Cycles.</p>
             </div>
 
-<!-- Consistent PDF View Buttons -->
+            <!-- Consistent PDF View Buttons linked to GitHub Blob Viewers with properly encoded parentheses -->
             <div class="flex flex-col gap-3 pt-2">
-<a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/DS-Y%20%28yoroshiku%29%20CAD%20by%20Philip%20Lord%20and%20David%20Duval-Smith.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-800 hover:border-amber-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
-    <span class="text-base">📐</span> View Namaiki Cycles DS-Y (yoroshiku) CAD (.PDF)
-</a>
+                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/DS-Y%20%28yoroshiku%29%20CAD%20by%20Philip%20Lord%20and%20David%20Duval-Smith.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-800 hover:border-amber-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
+                    <span class="text-base">📐</span> View Namaiki Cycles DS-Y (yoroshiku) CAD (.PDF)
+                </a>
                 <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20%28v1%29%20by%20Namaiki%20Cycles_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-amber-400 border border-slate-800 hover:border-amber-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
                     <span class="text-base">📐</span> View Namaiki Cycles / RODO Racing LO-8 Prototype V1 (2000) (.PDF)
                 </a>
@@ -266,7 +298,7 @@
         
         <!-- Tiny Ownership Footnote -->
         <p class="max-w-2xl mx-auto text-[10px] text-slate-600 leading-tight">
-            * <strong>Historical Record & Ownership Clarification:</strong> While third-party individuals have previously claimed ownership of the brand online, Namaiki Cycles was never sold, transferred, or co-owned outside of its creators. Full equity, brand rights, and intellectual property remained exclusively with founders David Duval-Smith and Philip Lord throughout the company's existence.
+            * <strong>Historical Record & Ownership Clarification:</strong> While third-party individual Brad Hodges has previously claimed ownership of the brand online, Namaiki Cycles was never sold, transferred, or co-owned by Hodges. He was briefly engaged on a contract basis strictly to assist with liaison and communications with the Kinesis USA manufacturing facility during production. Sole equity, brand ownership, and intellectual property remained exclusively with founders David Duval-Smith and Philip Lord throughout the company's existence.
         </p>
     </footer>
 
@@ -276,36 +308,38 @@
             <h4 id="lightbox-title" class="text-amber-400 font-mono text-sm md:text-base font-semibold"></h4>
             
             <div class="flex items-center gap-2">
-                <button onclick="prevPage()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Previous Page (Left Arrow)">← Prev</button>
-                <button onclick="nextPage()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Next Page (Right Arrow)">Next →</button>
+                <button onclick="prevItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Previous (Left Arrow)">← Prev</button>
+                <button onclick="nextItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Next (Right Arrow)">Next →</button>
                 <button onclick="closeLightbox()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 ml-2">✕ Close</button>
             </div>
         </div>
         
         <div class="flex flex-col md:flex-row gap-6 max-w-6xl w-full mx-auto my-auto items-center md:items-start relative">
             <!-- Left Arrow Button Overlay -->
-            <button onclick="prevPage()" class="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition">❮</button>
+            <button onclick="prevItem()" class="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition">❮</button>
 
             <!-- Image Panel -->
             <div class="w-full md:w-1/2 flex justify-center">
-                <img id="lightbox-img" src="" alt="Archive Page" class="max-w-full max-h-[75vh] object-contain rounded border border-slate-800 shadow-2xl">
+                <img id="lightbox-img" src="" alt="Archive Item" class="max-w-full max-h-[75vh] object-contain rounded border border-slate-800 shadow-2xl">
             </div>
             
-            <!-- Translation Panel -->
+            <!-- Translation/Description Panel -->
             <div class="w-full md:w-1/2 bg-slate-900 border border-slate-800 rounded-xl p-6 text-slate-300 text-sm overflow-y-auto max-h-[75vh] space-y-4">
-                <span class="text-xs font-mono uppercase tracking-widest text-amber-400 block border-b border-slate-800 pb-2">Translation</span>
-                <div id="lightbox-translation" class="leading-relaxed space-y-3"></div>
+                <span id="lightbox-panel-label" class="text-xs font-mono uppercase tracking-widest text-amber-400 block border-b border-slate-800 pb-2">Translation / Details</span>
+                <div id="lightbox-content" class="leading-relaxed space-y-3"></div>
             </div>
 
             <!-- Right Arrow Button Overlay -->
-            <button onclick="nextPage()" class="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition">❯</button>
+            <button onclick="nextItem()" class="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition">❯</button>
         </div>
     </div>
 
-    <!-- Lightbox JavaScript, Navigation & Translation Dataset -->
+    <!-- Lightbox JavaScript, Navigation & Datasets -->
     <script>
-        let currentPageIndex = 1;
-        const totalPages = 16;
+        let currentMode = 'doc'; // 'doc' or 'photo'
+        let currentIndex = 1;
+        const totalDocs = 16;
+        const totalPhotos = 14;
 
         const pageData = {
             1: {
@@ -431,15 +465,30 @@
             16: { file: "Namaiki Cycles_Page_16.jpg", title: "Archive Page 16 of 16", text: "Historical catalog documentation and photography." }
         };
 
-        function openLightbox(pageIndex) {
-            currentPageIndex = pageIndex;
-            const data = pageData[pageIndex] || { file: `Namaiki Cycles_Page_${pageIndex.toString().padStart(2, '0')}.jpg`, title: `Archive Page ${pageIndex} of 16`, text: "Verbatim translation record for this page." };
-            
-            document.getElementById('lightbox-title').innerText = data.title;
-            document.getElementById('lightbox-img').src = data.file;
-            document.getElementById('lightbox-translation').innerHTML = data.text;
+        function openLightbox(mode, index) {
+            currentMode = mode;
+            currentIndex = index;
             
             const lb = document.getElementById('lightbox');
+            const titleEl = document.getElementById('lightbox-title');
+            const imgEl = document.getElementById('lightbox-img');
+            const contentEl = document.getElementById('lightbox-content');
+            const labelEl = document.getElementById('lightbox-panel-label');
+
+            if (mode === 'doc') {
+                const data = pageData[index] || { file: `Namaiki Cycles_Page_${index.toString().padStart(2, '0')}.jpg`, title: `Archive Page ${index} of 16`, text: "Verbatim translation record for this page." };
+                titleEl.innerText = data.title;
+                imgEl.src = data.file;
+                labelEl.innerText = "Translation";
+                contentEl.innerHTML = data.text;
+            } else {
+                const filename = photoFiles[index - 1];
+                titleEl.innerText = `Namaiki Archive Photo ${index} of ${totalPhotos}`;
+                imgEl.src = `photos/${filename}`;
+                labelEl.innerText = "Photo Details";
+                contentEl.innerHTML = `<p class="text-slate-300">Original archive photograph (${filename}) from the Namaiki Cycles collection documenting frames, builds, and riders.</p>`;
+            }
+
             lb.classList.remove('hidden');
             lb.classList.add('flex');
             document.body.style.overflow = 'hidden';
@@ -452,14 +501,22 @@
             document.body.style.overflow = 'auto';
         }
 
-        function nextPage() {
-            currentPageIndex = currentPageIndex >= totalPages ? 1 : currentPageIndex + 1;
-            openLightbox(currentPageIndex);
+        function nextItem() {
+            if (currentMode === 'doc') {
+                currentIndex = currentIndex >= totalDocs ? 1 : currentIndex + 1;
+            } else {
+                currentIndex = currentIndex >= totalPhotos ? 1 : currentIndex + 1;
+            }
+            openLightbox(currentMode, currentIndex);
         }
 
-        function prevPage() {
-            currentPageIndex = currentPageIndex <= 1 ? totalPages : currentPageIndex - 1;
-            openLightbox(currentPageIndex);
+        function prevItem() {
+            if (currentMode === 'doc') {
+                currentIndex = currentIndex <= 1 ? totalDocs : currentIndex - 1;
+            } else {
+                currentIndex = currentIndex <= 1 ? totalPhotos : currentIndex - 1;
+            }
+            openLightbox(currentMode, currentIndex);
         }
 
         // Keyboard navigation support for lightbox
@@ -467,8 +524,8 @@
             const lb = document.getElementById('lightbox');
             if (!lb.classList.contains('hidden')) {
                 if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowRight') nextPage();
-                if (e.key === 'ArrowLeft') prevPage();
+                if (e.key === 'ArrowRight') nextItem();
+                if (e.key === 'ArrowLeft') prevItem();
             }
         });
     </script>
