@@ -298,7 +298,7 @@
         
         <!-- Tiny Ownership Footnote -->
         <p class="max-w-2xl mx-auto text-[10px] text-slate-600 leading-tight">
-            * <strong>Historical Record & Ownership Clarification:</strong> While third-party individual Brad Hodges has previously claimed ownership of the brand online, Namaiki Cycles was never sold, transferred, or co-owned by Hodges. He was briefly engaged on a contract basis strictly to assist with liaison and communications with the Kinesis USA manufacturing facility during production. Sole equity, brand ownership, and intellectual property remained exclusively with founders David Duval-Smith and Philip Lord throughout the company's existence.
+            * <strong>Historical Record & Ownership Clarification:</strong> While third-party individuals have previously claimed ownership of the brand online, Namaiki Cycles was never sold, transferred, or co-owned by a 3rd party interest. Sole equity, brand ownership, and intellectual property remained exclusively with founders David Duval-Smith and Philip Lord throughout the company's existence.
         </p>
     </footer>
 
@@ -314,23 +314,21 @@
             </div>
         </div>
         
-        <div class="flex flex-col md:flex-row gap-6 max-w-6xl w-full mx-auto my-auto items-center md:items-start relative">
+        <div id="lightbox-body-container" class="max-w-6xl w-full mx-auto my-auto flex justify-center items-center relative">
             <!-- Left Arrow Button Overlay -->
-            <button onclick="prevItem()" class="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition">❮</button>
+            <button onclick="prevItem()" class="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition z-10">❮</button>
 
-            <!-- Image Panel -->
-            <div class="w-full md:w-1/2 flex justify-center">
-                <img id="lightbox-img" src="" alt="Archive Item" class="max-w-full max-h-[75vh] object-contain rounded border border-slate-800 shadow-2xl">
-            </div>
-            
-            <!-- Translation/Description Panel -->
-            <div class="w-full md:w-1/2 bg-slate-900 border border-slate-800 rounded-xl p-6 text-slate-300 text-sm overflow-y-auto max-h-[75vh] space-y-4">
-                <span id="lightbox-panel-label" class="text-xs font-mono uppercase tracking-widest text-amber-400 block border-b border-slate-800 pb-2">Translation / Details</span>
-                <div id="lightbox-content" class="leading-relaxed space-y-3"></div>
+            <!-- Image/Content Panel -->
+            <div id="lightbox-main-panel" class="w-full flex justify-center">
+                <img id="lightbox-img" src="" alt="Archive Item" class="max-w-full max-h-[80vh] object-contain rounded border border-slate-800 shadow-2xl">
+                <div id="lightbox-translation-wrap" class="w-full md:w-1/2 bg-slate-900 border border-slate-800 rounded-xl p-6 text-slate-300 text-sm overflow-y-auto max-h-[75vh] space-y-4 hidden">
+                    <span class="text-xs font-mono uppercase tracking-widest text-amber-400 block border-b border-slate-800 pb-2">Translation</span>
+                    <div id="lightbox-translation" class="leading-relaxed space-y-3"></div>
+                </div>
             </div>
 
             <!-- Right Arrow Button Overlay -->
-            <button onclick="nextItem()" class="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition">❯</button>
+            <button onclick="nextItem()" class="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-amber-400 text-3xl font-mono p-2 transition z-10">❯</button>
         </div>
     </div>
 
@@ -472,21 +470,26 @@
             const lb = document.getElementById('lightbox');
             const titleEl = document.getElementById('lightbox-title');
             const imgEl = document.getElementById('lightbox-img');
-            const contentEl = document.getElementById('lightbox-content');
-            const labelEl = document.getElementById('lightbox-panel-label');
+            const translationWrap = document.getElementById('lightbox-translation-wrap');
+            const mainPanel = document.getElementById('lightbox-main-panel');
 
             if (mode === 'doc') {
                 const data = pageData[index] || { file: `Namaiki Cycles_Page_${index.toString().padStart(2, '0')}.jpg`, title: `Archive Page ${index} of 16`, text: "Verbatim translation record for this page." };
                 titleEl.innerText = data.title;
                 imgEl.src = data.file;
-                labelEl.innerText = "Translation";
-                contentEl.innerHTML = data.text;
+                imgEl.className = "max-w-full md:max-w-[50%] max-h-[75vh] object-contain rounded border border-slate-800 shadow-2xl";
+                document.getElementById('lightbox-translation').innerHTML = data.text;
+                translationWrap.classList.remove('hidden');
+                translationWrap.classList.add('block');
+                mainPanel.className = "w-full flex flex-col md:flex-row gap-6 justify-center items-center md:items-start";
             } else {
                 const filename = photoFiles[index - 1];
                 titleEl.innerText = `Namaiki Archive Photo ${index} of ${totalPhotos}`;
                 imgEl.src = `photos/${filename}`;
-                labelEl.innerText = "Photo Details";
-                contentEl.innerHTML = `<p class="text-slate-300">Original archive photograph (${filename}) from the Namaiki Cycles collection documenting frames, builds, and riders.</p>`;
+                imgEl.className = "max-w-full max-h-[80vh] object-contain rounded border border-slate-800 shadow-2xl";
+                translationWrap.classList.remove('block');
+                translationWrap.classList.add('hidden');
+                mainPanel.className = "w-full flex justify-center items-center";
             }
 
             lb.classList.remove('hidden');
