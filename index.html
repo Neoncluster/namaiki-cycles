@@ -154,7 +154,7 @@
                     </div>
                     <ul class="text-slate-400 text-sm space-y-2 leading-relaxed">
                         <li>
-                            <strong class="text-slate-200">Namaiki Cycles:</strong> Co-founded and co-owned the independent bicycle venture with David Duval-Smith, collaboratively leading frameset geometry and design.
+                            <strong class="text-slate-200">Namaiki Cycles:</strong> Co-founded and co-owned the independent bicycle venture with Philip Lord, collaboratively leading frameset geometry and design.
                         </li>
                         <li>
                             <strong class="text-slate-200">Wieden+Kennedy Tokyo:</strong> Prior to and alongside Namaiki Cycles, Philip worked as an Art Director at Wieden+Kennedy Tokyo, leading award-winning advertising campaigns for Nike Japan.
@@ -184,13 +184,23 @@
             </div>
         </section>
 
-        <!-- Flagship Model: DS-Y -->
+        <!-- Flagship Model: DS-Y with CAD Image Feature -->
         <section class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
             <header class="space-y-2">
                 <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Flagship Model</span>
                 <h3 class="text-3xl font-bold text-white">The DS-Y Frame</h3>
                 <p class="text-slate-400 text-sm">Acronym for <em>Dual Slalom Yoroshiku</em></p>
             </header>
+
+            <!-- Featured CAD Image Card: NamaikiCycles_DS-Y_CAD.jpg -->
+            <div class="bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden group">
+                <div class="overflow-hidden cursor-pointer" onclick="openLightbox('cad', 'photos/NamaikiCycles_DS-Y_CAD.jpg')">
+                    <img src="photos/NamaikiCycles_DS-Y_CAD.jpg" alt="Namaiki Cycles DS-Y Technical CAD Illustration" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
+                    Technical Drawing: Namaiki Cycles DS-Y Frame CAD Illustration (Click to view full size)
+                </div>
+            </div>
 
             <ul class="space-y-4 text-slate-300">
                 <li class="flex items-start gap-3">
@@ -323,7 +333,7 @@
         <div class="flex justify-between items-center mb-4 max-w-6xl w-full mx-auto">
             <h4 id="lightbox-title" class="text-lime-400 font-mono text-sm md:text-base font-semibold"></h4>
             
-            <div class="flex items-center gap-2">
+            <div id="lightbox-nav-buttons" class="flex items-center gap-2">
                 <button onclick="prevItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Previous (Left Arrow)">← Prev</button>
                 <button onclick="nextItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Next (Right Arrow)">Next →</button>
                 <button onclick="closeLightbox()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 ml-2">✕ Close</button>
@@ -332,7 +342,7 @@
         
         <div id="lightbox-body-container" class="max-w-6xl w-full mx-auto my-auto flex justify-center items-center relative">
             <!-- Left Arrow Button Overlay -->
-            <button onclick="prevItem()" class="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-lime-400 text-3xl font-mono p-2 transition z-10">❮</button>
+            <button id="lightbox-prev-arrow" onclick="prevItem()" class="hidden md:flex absolute -left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-lime-400 text-3xl font-mono p-2 transition z-10">❮</button>
 
             <!-- Image/Content Panel -->
             <div id="lightbox-main-panel" class="w-full flex justify-center">
@@ -344,16 +354,16 @@
             </div>
 
             <!-- Right Arrow Button Overlay -->
-            <button onclick="nextItem()" class="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-lime-400 text-3xl font-mono p-2 transition z-10">❯</button>
+            <button id="lightbox-next-arrow" onclick="nextItem()" class="hidden md:flex absolute -right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-lime-400 text-3xl font-mono p-2 transition z-10">❯</button>
         </div>
     </div>
 
     <!-- Lightbox JavaScript, Navigation & Datasets -->
     <script>
-        let currentMode = 'doc'; // 'doc' or 'photo'
+        let currentMode = 'doc'; // 'doc', 'photo', or 'cad'
         let currentIndex = 1;
         const totalDocs = 16;
-        const totalPhotos = 16; // Updated to include Namaiki_16.jpg
+        const totalPhotos = 16;
 
         const pageData = {
             1: {
@@ -414,23 +424,20 @@
                 Caption under the main photo: Original bicycle frame made by “Namaiki” David Duval-Smith (front) and Wieden+Kennedy Japan AD Philip Lord, in front of the Namaiki office “deluxe”.`
             },
             6: {
-                file: "Namaiki Cycles_Page_06.jpg",
-                title: "Designers' Workshop — Origin Story & Street Riding (Page 6 of 16)",
+                file: "Designers' Workshop — Origin Story & Street Riding (Page 6 of 16)",
                 text: `<strong>How the bike was born (two years earlier):</strong><br>
                 One day while hanging out with friend Phil (Philip Lord) at a park, riding bikes and drinking beer, they talked about how current bikes were mediocre. “Let’s just build one ourselves.” They didn’t care about profit — if you don’t have that philosophy you won’t survive.<br><br>
                 Mike agreed and the frame design began. The short rear end makes wheelies easy; the bike is deliberately different from ordinary MTBs. Once the first batch of frames arrived from the factory, orders started coming in.<br><br>
                 Big photo: David’s stylish jump — the small rear wheel is the secret to easy wheelies.`
             },
             7: {
-                file: "Namaiki Cycles_Page_07.jpg",
-                title: "Designers' Workshop — Studio Culture & Philosophy (Page 7 of 16)",
+                file: "Designers' Workshop — Studio Culture & Philosophy (Page 7 of 16)",
                 text: `<strong>Inside deluxe (Azabu-Juban):</strong> A 200 m² warehouse shared with ~15 creators (Klein Dytham architecture, Spin Off interior design, Tokyo Brewing Company, CG/DJ Midori Kuroyaku, musician DOREMI, artist Tanaka Noriyuki, etc.). Bikes are ridden freely inside the space.<br><br>
                 <strong>David on how they work:</strong><br>
                 <em>“We never pitch design work. When we just do the things we’re interested in, people notice and come to us. That’s the best. If you pitch, you sound like telemarketing. But if something interesting appears, push it, talk to people, pull others in — friends help out and it naturally becomes a business.”</em>`
             },
             8: {
-                file: "Namaiki Cycles_Page_08.jpg",
-                title: "clic.ex Magazine Feature #77 (Page 8 of 16)",
+                file: "clic.ex Magazine Feature #77 (Page 8 of 16)",
                 text: `• <strong>Product Spotlight:</strong> Namaiki DS-Y Frame (¥140,000) & Yoroshiku Jersey (¥12,800).<br>
                 • <strong>Catchphrase:</strong> <em>"Cool. Easy to jump. Strong."</em><br>
                 • <strong>Copy:</strong> 7005 aluminum, handmade in USA, extremely durable, surprisingly light. Absolutely "Give Up" before the frame does!<br>
@@ -479,18 +486,32 @@
             16: { file: "Namaiki Cycles_Page_16.jpg", title: "Archive Page 16 of 16", text: "Historical catalog documentation and photography." }
         };
 
-        function openLightbox(mode, index) {
+        function openLightbox(mode, indexOrPath) {
             currentMode = mode;
-            currentIndex = index;
             
             const lb = document.getElementById('lightbox');
             const titleEl = document.getElementById('lightbox-title');
             const imgEl = document.getElementById('lightbox-img');
             const translationWrap = document.getElementById('lightbox-translation-wrap');
             const mainPanel = document.getElementById('lightbox-main-panel');
+            const prevArrow = document.getElementById('lightbox-prev-arrow');
+            const nextArrow = document.getElementById('lightbox-next-arrow');
+            const navButtons = document.getElementById('lightbox-nav-buttons');
 
-            if (mode === 'doc') {
-                const data = pageData[index] || { file: `Namaiki Cycles_Page_${index.toString().padStart(2, '0')}.jpg`, title: `Archive Page ${index} of 16`, text: "Verbatim translation record for this page." };
+            if (mode === 'cad') {
+                titleEl.innerText = "Namaiki Cycles DS-Y — Technical CAD Drawing";
+                imgEl.src = indexOrPath;
+                imgEl.className = "max-w-full max-h-[85vh] object-contain rounded border border-slate-800 shadow-2xl";
+                translationWrap.classList.remove('block');
+                translationWrap.classList.add('hidden');
+                mainPanel.className = "w-full flex justify-center items-center";
+                
+                // Hide prev/next buttons for single CAD viewer
+                prevArrow.classList.add('hidden');
+                nextArrow.classList.add('hidden');
+            } else if (mode === 'doc') {
+                currentIndex = indexOrPath;
+                const data = pageData[currentIndex] || { file: `Namaiki Cycles_Page_${currentIndex.toString().padStart(2, '0')}.jpg`, title: `Archive Page ${currentIndex} of 16`, text: "Verbatim translation record for this page." };
                 titleEl.innerText = data.title;
                 imgEl.src = data.file;
                 imgEl.className = "max-w-full md:max-w-[50%] max-h-[75vh] object-contain rounded border border-slate-800 shadow-2xl";
@@ -498,14 +519,21 @@
                 translationWrap.classList.remove('hidden');
                 translationWrap.classList.add('block');
                 mainPanel.className = "w-full flex flex-col md:flex-row gap-6 justify-center items-center md:items-start";
-            } else {
-                const filename = photoFiles[index - 1];
-                titleEl.innerText = `Namaiki Archive Photo ${index} of ${totalPhotos}`;
+                
+                prevArrow.classList.remove('hidden');
+                nextArrow.classList.remove('hidden');
+            } else { // 'photo'
+                currentIndex = indexOrPath;
+                const filename = photoFiles[currentIndex - 1];
+                titleEl.innerText = `Namaiki Archive Photo ${currentIndex} of ${totalPhotos}`;
                 imgEl.src = `photos/${filename}`;
                 imgEl.className = "max-w-full max-h-[80vh] object-contain rounded border border-slate-800 shadow-2xl";
                 translationWrap.classList.remove('block');
                 translationWrap.classList.add('hidden');
                 mainPanel.className = "w-full flex justify-center items-center";
+                
+                prevArrow.classList.remove('hidden');
+                nextArrow.classList.remove('hidden');
             }
 
             lb.classList.remove('hidden');
@@ -521,6 +549,7 @@
         }
 
         function nextItem() {
+            if (currentMode === 'cad') return;
             if (currentMode === 'doc') {
                 currentIndex = currentIndex >= totalDocs ? 1 : currentIndex + 1;
             } else {
@@ -530,6 +559,7 @@
         }
 
         function prevItem() {
+            if (currentMode === 'cad') return;
             if (currentMode === 'doc') {
                 currentIndex = currentIndex <= 1 ? totalDocs : currentIndex - 1;
             } else {
