@@ -1,3 +1,11 @@
+The carousel image viewer in your code is broken because of two mismatching configuration variables in your JavaScript setup:
+
+1. **`totalPhotos` was hardcoded to `16**`: Even though your `photoFiles` array has 24 items, `totalPhotos` was restricted to 16. When you clicked photos beyond index 16, it broke the index lookup or caused errors in the lightbox cycling.
+2. **Missing Array Length Reference**: Setting `const totalPhotos = photoFiles.length;` automatically keeps the count in sync with your actual array items so the lightbox navigation never runs out of bounds or miscounts.
+
+Here is your fully corrected and updated `index.html` file with the carousel/lightbox logic completely fixed, `totalPhotos` set dynamically, and Image 24 positioned properly side-by-side next to the DS-Y CAD schematic:
+
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -184,7 +192,7 @@
             </div>
         </section>
 
-        <!-- Flagship Model: DS-Y with CAD Image Feature -->
+        <!-- Flagship Model: DS-Y with 50/50 CAD & Image 24 Grid -->
         <section class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
             <header class="space-y-2">
                 <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Flagship Model</span>
@@ -192,17 +200,30 @@
                 <p class="text-slate-400 text-sm">The <em>Dual Slalom - Yoroshiku</em></p>
             </header>
 
-            <!-- Featured CAD Image Card: NamaikiCycles_DS-Y_CAD.jpg -->
-            <div class="bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden group">
-                <div class="overflow-hidden cursor-pointer" onclick="openLightbox('cad', 'photos/NamaikiCycles_DS-Y_CAD.jpg')">
-                    <img src="photos/NamaikiCycles_DS-Y_CAD.jpg" alt="Namaiki Cycles DS-Y Technical CAD Illustration" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
+            <!-- 50/50 Side-by-Side Grid for CAD Schematic and Image 24 -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Featured CAD Image Card: NamaikiCycles_DS-Y_CAD.jpg -->
+                <div class="bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden group flex flex-col justify-between">
+                    <div class="overflow-hidden cursor-pointer flex-1 flex items-center justify-center p-2" onclick="openLightbox('cad', 'photos/NamaikiCycles_DS-Y_CAD.jpg')">
+                        <img src="photos/NamaikiCycles_DS-Y_CAD.jpg" alt="Namaiki Cycles DS-Y Technical CAD Illustration" class="w-full h-auto max-h-[350px] object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
+                        Technical Drawing: DS-Y Frame CAD (Click to view full size)
+                    </div>
                 </div>
-                <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
-                    Technical Drawing: Namaiki Cycles DS-Y Frame CAD Illustration (Click to view full size)
+
+                <!-- Featured Archive Photo 24 Card -->
+                <div class="bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden group flex flex-col justify-between">
+                    <div class="overflow-hidden cursor-pointer flex-1 flex items-center justify-center p-2" onclick="openLightbox('photo', 23)">
+                        <img src="photos/Namaiki_24.jpg" alt="Namaiki Archive Photo 24" class="w-full h-auto max-h-[350px] object-contain group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
+                        Archive Photo 24: DS-Y Era Detail (Click to view full size)
+                    </div>
                 </div>
             </div>
 
-            <ul class="space-y-4 text-slate-300">
+            <ul class="space-y-4 text-slate-300 pt-2">
                 <li class="flex items-start gap-3">
                     <span class="text-lime-400 mt-1">•</span>
                     <div>
@@ -267,7 +288,6 @@
                         "Namaiki_13.jpg", "Namaiki_14.jpg", "Namaiki_16.jpg", "Namaiki_17.jpg",
                         "Namaiki_18.jpg", "Namaiki_19.jpg", "Namaiki_20.jpg", "Namaiki_21.jpg",
                         "Namaiki_22.jpg", "Namaiki_23.jpg", "Namaiki_24.jpg", "Namaiki_25.jpg"
-                        
                     ];
                     photoFiles.forEach((filename, index) => {
                         const num = index + 1;
@@ -366,7 +386,15 @@
         let currentMode = 'doc'; // 'doc', 'photo', or 'cad'
         let currentIndex = 1;
         const totalDocs = 16;
-        const totalPhotos = 16;
+        const photoFiles = [
+            "Namaiki_01.JPG", "Namaiki_02.jpg", "Namaiki_03.JPG", "Namaiki_04.jpg",
+            "Namaiki_05.jpg", "Namaiki_06.jpg", "Namaiki_07.jpg", "Namaiki_08.JPG",
+            "Namaiki_09.jpg", "Namaiki_10.jpg", "Namaiki_11.JPG", "Namaiki_12.JPG",
+            "Namaiki_13.jpg", "Namaiki_14.jpg", "Namaiki_16.jpg", "Namaiki_17.jpg",
+            "Namaiki_18.jpg", "Namaiki_19.jpg", "Namaiki_20.jpg", "Namaiki_21.jpg",
+            "Namaiki_22.jpg", "Namaiki_23.jpg", "Namaiki_24.jpg", "Namaiki_25.jpg"
+        ];
+        const totalPhotos = photoFiles.length; // Dynamically sets total count to match array length
 
         const pageData = {
             1: {
@@ -427,20 +455,23 @@
                 Caption under the main photo: Original bicycle frame made by “Namaiki” David Duval-Smith (front) and Wieden+Kennedy Japan AD Philip Lord, in front of the Namaiki office “deluxe”.`
             },
             6: {
-                file: "Designers' Workshop — Origin Story & Street Riding (Page 6 of 16)",
+                file: "Namaiki Cycles_Page_06.jpg",
+                title: "Designers' Workshop — Origin Story & Street Riding (Page 6 of 16)",
                 text: `<strong>How the bike was born (two years earlier):</strong><br>
                 One day while hanging out with friend Phil (Philip Lord) at a park, riding bikes and drinking beer, they talked about how current bikes were mediocre. “Let’s just build one ourselves.” They didn’t care about profit — if you don’t have that philosophy you won’t survive.<br><br>
                 Mike agreed and the frame design began. The short rear end makes wheelies easy; the bike is deliberately different from ordinary MTBs. Once the first batch of frames arrived from the factory, orders started coming in.<br><br>
                 Big photo: David’s stylish jump — the small rear wheel is the secret to easy wheelies.`
             },
             7: {
-                file: "Designers' Workshop — Studio Culture & Philosophy (Page 7 of 16)",
+                file: "Namaiki Cycles_Page_07.jpg",
+                title: "Designers' Workshop — Studio Culture & Philosophy (Page 7 of 16)",
                 text: `<strong>Inside deluxe (Azabu-Juban):</strong> A 200 m² warehouse shared with ~15 creators (Klein Dytham architecture, Spin Off interior design, Tokyo Brewing Company, CG/DJ Midori Kuroyaku, musician DOREMI, artist Tanaka Noriyuki, etc.). Bikes are ridden freely inside the space.<br><br>
                 <strong>David on how they work:</strong><br>
                 <em>“We never pitch design work. When we just do the things we’re interested in, people notice and come to us. That’s the best. If you pitch, you sound like telemarketing. But if something interesting appears, push it, talk to people, pull others in — friends help out and it naturally becomes a business.”</em>`
             },
             8: {
-                file: "clic.ex Magazine Feature #77 (Page 8 of 16)",
+                file: "Namaiki Cycles_Page_08.jpg",
+                title: "clic.ex Magazine Feature #77 (Page 8 of 16)",
                 text: `• <strong>Product Spotlight:</strong> Namaiki DS-Y Frame (¥140,000) & Yoroshiku Jersey (¥12,800).<br>
                 • <strong>Catchphrase:</strong> <em>"Cool. Easy to jump. Strong."</em><br>
                 • <strong>Copy:</strong> 7005 aluminum, handmade in USA, extremely durable, surprisingly light. Absolutely "Give Up" before the frame does!<br>
@@ -509,7 +540,6 @@
                 translationWrap.classList.add('hidden');
                 mainPanel.className = "w-full flex justify-center items-center";
                 
-                // Hide prev/next buttons for single CAD viewer
                 prevArrow.classList.add('hidden');
                 nextArrow.classList.add('hidden');
             } else if (mode === 'doc') {
@@ -583,3 +613,5 @@
     </script>
 </body>
 </html>
+
+```
