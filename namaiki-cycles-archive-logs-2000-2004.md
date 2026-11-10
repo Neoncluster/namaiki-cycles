@@ -30,8 +30,6 @@ The extracts published below are a record of email correspondence between Brad H
 The extracts are transcribed from the archived email correspondence. Where passages have been shortened, omissions are indicated by ellipses. They are presented alongside relevant later public statements to provide a documentary timeline of the events and the differing accounts of Namaiki Cycles' history.
 This timeline focuses on correspondence relevant to the matters discussed below. It is not intended to reproduce every communication or resolve every aspect of the parties' respective accounts.
 
-This timeline focuses on correspondence relevant to the matters discussed below. It is not intended to reproduce every communication or resolve every aspect of the parties' respective accounts.
-
 ---
 
 ## 1. The Original Agreement
