@@ -104,7 +104,7 @@
                 <p class="text-slate-400 text-sm">Click any page thumbnail to view full-screen alongside its precise verbatim translation.</p>
             </header>
 
-            <!-- Explicit 16 Thumbnail Grid (Sharp edges) -->
+            <!-- Explicit 16 Thumbnail Grid -->
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 <script>
                     for (let i = 1; i <= 16; i++) {
@@ -184,7 +184,7 @@
             </div>
         </section>
 
-        <!-- Flagship Model: DS-Y with 50/50 CAD & Image 24 Grid -->
+        <!-- Flagship Model: DS-Y with single CAD Image Feature -->
         <section class="space-y-6 bg-slate-900/40 border border-slate-800 p-8">
             <header class="space-y-2">
                 <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Flagship Model</span>
@@ -192,30 +192,17 @@
                 <p class="text-slate-400 text-sm">The <em>Dual Slalom - Yoroshiku</em></p>
             </header>
 
-            <!-- 50/50 Side-by-Side Grid for CAD Schematic and Image 24 -->
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Featured CAD Image Card -->
-                <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group flex flex-col justify-between">
-                    <div class="overflow-hidden cursor-pointer flex-1 flex items-center justify-center p-2" onclick="openLightbox('cad', 'photos/NamaikiCycles_DS-Y_CAD.jpg')">
-                        <img src="photos/NamaikiCycles_DS-Y_CAD.jpg" alt="Namaiki Cycles DS-Y Technical CAD Illustration" class="w-full h-auto max-h-[350px] object-contain group-hover:scale-105 transition duration-300">
-                    </div>
-                    <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
-                        Technical Drawing: DS-Y Frame CAD (Click to view full size)
-                    </div>
+            <!-- Featured CAD Image Card (Single Image) -->
+            <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group">
+                <div class="overflow-hidden cursor-pointer" onclick="openLightbox('cad', 'photos/NamaikiCycles_DS-Y_CAD.jpg')">
+                    <img src="photos/NamaikiCycles_DS-Y_CAD.jpg" alt="Namaiki Cycles DS-Y Technical CAD Illustration" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
                 </div>
-
-                <!-- Featured Archive Photo 24 Card -->
-                <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group flex flex-col justify-between">
-                    <div class="overflow-hidden cursor-pointer flex-1 flex items-center justify-center p-2" onclick="openLightbox('photo', 24)">
-                        <img src="photos/Namaiki_24.jpg" alt="Namaiki Archive Photo 24" class="w-full h-auto max-h-[350px] object-contain group-hover:scale-105 transition duration-300">
-                    </div>
-                    <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
-                        Archive Photo 24: DS-Y Era Detail (Click to view full size)
-                    </div>
+                <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
+                    Technical Drawing: Namaiki Cycles DS-Y Frame CAD Illustration (Click to view full size)
                 </div>
             </div>
 
-            <ul class="space-y-4 text-slate-300 pt-2">
+            <ul class="space-y-4 text-slate-300">
                 <li class="flex items-start gap-3">
                     <span class="text-lime-400 mt-1">•</span>
                     <div>
@@ -270,7 +257,7 @@
                 <p class="text-slate-400 text-sm">Explore original photographs from the archive. Click any thumbnail to view full-size.</p>
             </header>
 
-            <!-- Explicit Photo Thumbnail Grid (Sharp edges) -->
+            <!-- Explicit Photo Thumbnail Grid -->
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 <script>
                     const photoFiles = [
@@ -343,7 +330,7 @@
         </p>
     </footer>
 
-    <!-- Interactive Lightbox Modal Overlay (Sharp edges) -->
+    <!-- Interactive Lightbox Modal Overlay -->
     <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex-col p-4 md:p-6 overflow-y-auto">
         <div class="flex justify-between items-center mb-4 max-w-6xl w-full mx-auto">
             <h4 id="lightbox-title" class="text-lime-400 font-mono text-sm md:text-base font-semibold"></h4>
