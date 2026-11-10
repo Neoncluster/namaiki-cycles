@@ -143,7 +143,7 @@ The distinction between the original design work, production involvement, profit
 
 ## Concluding Note
 
-The events documented here took place more than 22 years ago. In truth, I'm not sure anyone will even want to read such a long post. I am publishing it simply as a public historical record. I have no intention of seeking financial gain or pursuing any financial claim arising from these historical events.
+The events documented here took place more than 22 years ago. I am publishing it simply as a public historical record. I have no intention of seeking financial gain or pursuing any financial claim arising from these historical events.
 
 The purpose of presenting these records is to make contemporaneous correspondence and historical design material available alongside later public statements about Namaiki Cycles.
 
