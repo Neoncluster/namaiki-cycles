@@ -74,7 +74,7 @@
                 <img src="namaikilogo.png" alt="Namaiki Logo" class="h-8 w-auto object-contain">
                 <h1 class="text-xl font-bold tracking-wider text-lime-400 uppercase">Namaiki Cycles Archive</h1>
             </div>
-            <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-400 rounded">1997 - 2004</span>
+            <span class="text-xs font-mono px-2 py-1 bg-slate-800 text-slate-400">1997 - 2004</span>
         </div>
     </header>
 
@@ -83,7 +83,7 @@
         
         <!-- Hero Introduction -->
         <section class="space-y-6">
-            <div class="inline-block px-3 py-1 bg-lime-500/10 border border-lime-500/30 rounded-full text-lime-400 text-sm font-medium">
+            <div class="inline-block px-3 py-1 bg-lime-500/10 border border-lime-500/30 text-lime-400 text-sm font-medium">
                 Tokyo, Japan • Founded late 1990s
             </div>
             <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white flex items-center gap-4 flex-wrap">
@@ -96,8 +96,8 @@
             </p>
         </section>
 
-        <!-- Document Gallery Section (Positioned right after Intro) -->
-        <section class="space-y-6 border-t border-slate-800 pt-12">
+        <!-- Document Gallery Section (Positioned right after Intro, line removed) -->
+        <section class="space-y-6 pt-6">
             <header class="space-y-1">
                 <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Visual Archive</span>
                 <h3 class="text-2xl font-bold text-white">Document Gallery</h3>
@@ -110,10 +110,10 @@
                     for (let i = 1; i <= 16; i++) {
                         const numStr = i.toString().padStart(2, '0');
                         document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-lime-400 transition" onclick="openLightbox('doc', ${i})">
+                            <div class="group relative bg-slate-900 border border-slate-800 overflow-hidden cursor-pointer hover:border-lime-400 transition" onclick="openLightbox('doc', ${i})">
                                 <img src="Namaiki Cycles_Page_${numStr}.jpg" alt="Archive Page ${i}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
                                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                    <span class="text-xs font-mono bg-black/80 text-lime-400 px-2.5 py-1 rounded border border-lime-400/30">View Page ${i}</span>
+                                    <span class="text-xs font-mono bg-black/80 text-lime-400 px-2.5 py-1 border border-lime-400/30">View Page ${i}</span>
                                 </div>
                             </div>
                         `);
@@ -123,7 +123,7 @@
         </section>
 
         <!-- Founders & Ownership Highlight Card -->
-        <section class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-lime-500/20 p-8 rounded-2xl space-y-6 shadow-xl">
+        <section class="bg-gradient-to-br from-slate-900 to-slate-900/80 border border-lime-500/20 p-8 space-y-6 shadow-xl">
             <header class="space-y-1">
                 <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Leadership & Vision</span>
                 <h3 class="text-2xl font-bold text-white">Founders & Owners</h3>
@@ -131,7 +131,7 @@
             
             <div class="grid sm:grid-cols-2 gap-6 pt-2">
                 <!-- David Duval-Smith -->
-                <div class="bg-slate-950/60 border border-slate-800 p-5 rounded-xl space-y-3">
+                <div class="bg-slate-950/60 border border-slate-800 p-5 space-y-3">
                     <div>
                         <div class="text-lg font-semibold text-white">David Duval-Smith</div>
                         <div class="text-xs font-mono text-lime-400">Co-Founder & Co-Owner</div>
@@ -147,7 +147,7 @@
                 </div>
                 
                 <!-- Philip Lord -->
-                <div class="bg-slate-950/60 border border-slate-800 p-5 rounded-xl space-y-3">
+                <div class="bg-slate-950/60 border border-slate-800 p-5 space-y-3">
                     <div>
                         <div class="text-lg font-semibold text-white">Philip Lord</div>
                         <div class="text-xs font-mono text-lime-400">Co-Founder & Co-Owner</div>
@@ -170,13 +170,13 @@
 
         <!-- Brand Details Grid -->
         <section class="grid sm:grid-cols-2 gap-6">
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-3">
+            <div class="bg-slate-900 border border-slate-800 p-6 space-y-3">
                 <h3 class="text-lime-400 font-semibold text-lg">Name & Meaning</h3>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     <em>Namaiki</em> (生意気) is a Japanese term meaning cheeky, saucy, impudent, or insolent—capturing the rebellious, fun-first ethos of the brand.
                 </p>
             </div>
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-3">
+            <div class="bg-slate-900 border border-slate-800 p-6 space-y-3">
                 <h3 class="text-lime-400 font-semibold text-lg">Manufacturing & Build</h3>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     Built from aerospace-grade <strong>7005 aluminum</strong> and manufactured at the renowned <strong>Kinesis USA</strong> factory, featuring heavy-duty gussets for extreme durability. Their catchphrase loosely translated to: <em class="text-slate-200">"Cool, Easy to jump, Strong."</em>
@@ -185,7 +185,7 @@
         </section>
 
         <!-- Flagship Model: DS-Y with CAD Image Feature -->
-        <section class="space-y-6 bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
+        <section class="space-y-6 bg-slate-900/40 border border-slate-800 p-8">
             <header class="space-y-2">
                 <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Flagship Model</span>
                 <h3 class="text-3xl font-bold text-white">The DS-Y Frame</h3>
@@ -193,7 +193,7 @@
             </header>
 
             <!-- Featured CAD Image Card: NamaikiCycles_DS-Y_CAD.jpg -->
-            <div class="bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden group">
+            <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group">
                 <div class="overflow-hidden cursor-pointer" onclick="openLightbox('cad', 'photos/NamaikiCycles_DS-Y_CAD.jpg')">
                     <img src="photos/NamaikiCycles_DS-Y_CAD.jpg" alt="Namaiki Cycles DS-Y Technical CAD Illustration" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
                 </div>
@@ -227,13 +227,13 @@
         <!-- Successor: Rodo Racing with Namaiki_12.JPG Feature -->
         <section class="space-y-6">
             <h3 class="text-2xl font-bold text-white">Transition & Rodo Racing</h3>
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-6">
+            <div class="bg-slate-900 border border-slate-800 p-6 space-y-6">
                 <p class="text-slate-300 leading-relaxed">
                     Following the limited run of Namaiki framesets, development transitioned under a new banner: <strong>Rodo Racing</strong> ("Stuff from the Land of the Rising Sun").
                 </p>
 
                 <!-- Featured Photo Card: Namaiki_12.JPG -->
-                <div class="bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden group">
+                <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group">
                     <div class="overflow-hidden cursor-pointer" onclick="openLightbox('photo', 12)">
                         <img src="photos/Namaiki_12.JPG" alt="RODO / Namaiki Archive Feature" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
                     </div>
@@ -242,7 +242,7 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-950 p-4 rounded-lg border border-slate-800/80 text-sm text-slate-400 space-y-2">
+                <div class="bg-slate-950 p-4 border border-slate-800/80 text-sm text-slate-400 space-y-2">
                     <strong class="text-slate-200 block">The RODO LO-8 Prototype:</strong>
                     Under Rodo Racing, Philip Lord engineered a high-performance full-suspension downhill/freeride prototype known as the <strong>RODO LO-8</strong>. Featuring 8 inches of rear-wheel travel utilizing a rising-rate "parallactuated system" linkage, the frame was showcased in global media like <em>Pinkbike</em> in late 2003 before concluding its experimental run around 2004.
                 </div>
@@ -271,10 +271,10 @@
                     photoFiles.forEach((filename, index) => {
                         const num = index + 1;
                         document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 rounded-lg overflow-hidden cursor-pointer hover:border-lime-400 transition" onclick="openLightbox('photo', ${num})">
+                            <div class="group relative bg-slate-900 border border-slate-800 overflow-hidden cursor-pointer hover:border-lime-400 transition" onclick="openLightbox('photo', ${num})">
                                 <img src="photos/${filename}" alt="Namaiki Archive Photo ${num}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
                                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                                    <span class="text-xs font-mono bg-black/80 text-lime-400 px-2.5 py-1 rounded border border-lime-400/30">View Photo ${num}</span>
+                                    <span class="text-xs font-mono bg-black/80 text-lime-400 px-2.5 py-1 border border-lime-400/30">View Photo ${num}</span>
                                 </div>
                             </div>
                         `);
@@ -284,24 +284,24 @@
         </section>
 
         <!-- CAD PDF Archive Links & Usage Rights Section -->
-        <section class="space-y-4 bg-slate-900/60 border border-lime-500/20 p-8 rounded-2xl">
+        <section class="space-y-4 bg-slate-900/60 border border-lime-500/20 p-8">
             <h3 class="text-xl font-bold text-white">CAD Archive Downloads</h3>
             
             <!-- Usage Rights Notice placed above the buttons -->
-            <div class="text-xs text-lime-400/90 font-mono bg-slate-950/80 p-4 rounded-xl border border-lime-500/20 space-y-1">
+            <div class="text-xs text-lime-400/90 font-mono bg-slate-950/80 p-4 border border-lime-500/20 space-y-1">
                 <strong class="text-lime-400 block uppercase tracking-wider">Usage Rights:</strong>
                 <p>Licensed for Personal & Non-Commercial Use Only. All Commercial, Production, and Tradename Rights Reserved by Philip Lord / Namaiki Cycles.</p>
             </div>
 
             <!-- Consistent PDF View Buttons linked to GitHub Blob Viewers with properly encoded parentheses -->
             <div class="flex flex-col gap-3 pt-2">
-                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/DS-Y%20%28yoroshiku%29%20CAD%20by%20Philip%20Lord%20and%20David%20Duval-Smith.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
+                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/DS-Y%20%28yoroshiku%29%20CAD%20by%20Philip%20Lord%20and%20David%20Duval-Smith.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm transition shadow-lg">
                     <span class="text-base">📐</span> View Namaiki Cycles DS-Y (yoroshiku) CAD (.PDF)
                 </a>
-                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20%28v1%29%20by%20Namaiki%20Cycles_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
+                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20%28v1%29%20by%20Namaiki%20Cycles_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm transition shadow-lg">
                     <span class="text-base">📐</span> View Namaiki Cycles / RODO Racing LO-8 Prototype V1 (2000) (.PDF)
                 </a>
-                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20by%20Namaiki%20Cycles%3ARODO%20Racing_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm rounded-xl transition shadow-lg">
+                <a href="https://github.com/Neoncluster/namaiki-cycles/blob/main/LO-8%20DH%20bike%20by%20Namaiki%20Cycles%3ARODO%20Racing_Illustrations%20by%20Philip%20Lord.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-lime-400 border border-slate-800 hover:border-lime-500/40 font-semibold text-sm transition shadow-lg">
                     <span class="text-base">📐</span> View Namaiki Cycles / RODO Racing LO-8 Prototype FINAL Revision (.PDF)
                 </a>
             </div>
@@ -336,9 +336,9 @@
             <h4 id="lightbox-title" class="text-lime-400 font-mono text-sm md:text-base font-semibold"></h4>
             
             <div id="lightbox-nav-buttons" class="flex items-center gap-2">
-                <button onclick="prevItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Previous (Left Arrow)">← Prev</button>
-                <button onclick="nextItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 transition" title="Next (Right Arrow)">Next →</button>
-                <button onclick="closeLightbox()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 rounded hover:bg-slate-700 ml-2">✕ Close</button>
+                <button onclick="prevItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 hover:bg-slate-700 transition" title="Previous (Left Arrow)">← Prev</button>
+                <button onclick="nextItem()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 hover:bg-slate-700 transition" title="Next (Right Arrow)">Next →</button>
+                <button onclick="closeLightbox()" class="text-white text-sm font-mono bg-slate-800 px-3 py-1.5 hover:bg-slate-700 ml-2">✕ Close</button>
             </div>
         </div>
         
@@ -348,8 +348,8 @@
 
             <!-- Image/Content Panel -->
             <div id="lightbox-main-panel" class="w-full flex justify-center">
-                <img id="lightbox-img" src="" alt="Archive Item" class="max-w-full max-h-[80vh] object-contain rounded border border-slate-800 shadow-2xl">
-                <div id="lightbox-translation-wrap" class="w-full md:w-1/2 bg-slate-900 border border-slate-800 rounded-xl p-6 text-slate-300 text-sm overflow-y-auto max-h-[75vh] space-y-4 hidden">
+                <img id="lightbox-img" src="" alt="Archive Item" class="max-w-full max-h-[80vh] object-contain border border-slate-800 shadow-2xl">
+                <div id="lightbox-translation-wrap" class="w-full md:w-1/2 bg-slate-900 border border-slate-800 p-6 text-slate-300 text-sm overflow-y-auto max-h-[75vh] space-y-4 hidden">
                     <span class="text-xs font-mono uppercase tracking-widest text-lime-400 block border-b border-slate-800 pb-2">Translation</span>
                     <div id="lightbox-translation" class="leading-relaxed space-y-3"></div>
                 </div>
@@ -503,7 +503,7 @@
             if (mode === 'cad') {
                 titleEl.innerText = "Namaiki Cycles DS-Y — Technical CAD Drawing";
                 imgEl.src = indexOrPath;
-                imgEl.className = "max-w-full max-h-[85vh] object-contain rounded border border-slate-800 shadow-2xl";
+                imgEl.className = "max-w-full max-h-[85vh] object-contain border border-slate-800 shadow-2xl";
                 translationWrap.classList.remove('block');
                 translationWrap.classList.add('hidden');
                 mainPanel.className = "w-full flex justify-center items-center";
@@ -516,7 +516,7 @@
                 const data = pageData[currentIndex] || { file: `Namaiki Cycles_Page_${currentIndex.toString().padStart(2, '0')}.jpg`, title: `Archive Page ${currentIndex} of 16`, text: "Verbatim translation record for this page." };
                 titleEl.innerText = data.title;
                 imgEl.src = data.file;
-                imgEl.className = "max-w-full md:max-w-[50%] max-h-[75vh] object-contain rounded border border-slate-800 shadow-2xl";
+                imgEl.className = "max-w-full md:max-w-[50%] max-h-[75vh] object-contain border border-slate-800 shadow-2xl";
                 document.getElementById('lightbox-translation').innerHTML = data.text;
                 translationWrap.classList.remove('hidden');
                 translationWrap.classList.add('block');
@@ -529,7 +529,7 @@
                 const filename = photoFiles[currentIndex - 1];
                 titleEl.innerText = `Namaiki Archive Photo ${currentIndex} of ${totalPhotos}`;
                 imgEl.src = `photos/${filename}`;
-                imgEl.className = "max-w-full max-h-[80vh] object-contain rounded border border-slate-800 shadow-2xl";
+                imgEl.className = "max-w-full max-h-[80vh] object-contain border border-slate-800 shadow-2xl";
                 translationWrap.classList.remove('block');
                 translationWrap.classList.add('hidden');
                 mainPanel.className = "w-full flex justify-center items-center";
