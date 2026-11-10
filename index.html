@@ -96,7 +96,7 @@
             </p>
         </section>
 
-        <!-- Document Gallery Section -->
+        <!-- Document Gallery Section (Positioned right after Intro, divider line removed) -->
         <section class="space-y-6 pt-6">
             <header class="space-y-1">
                 <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Visual Archive</span>
@@ -110,9 +110,9 @@
                     for (let i = 1; i <= 16; i++) {
                         const numStr = i.toString().padStart(2, '0');
                         document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 overflow-hidden hover:border-lime-400 transition">
-                                <img src="Namaiki Cycles_Page_${numStr}.jpg" alt="Archive Page ${i}" class="w-full h-48 object-cover cursor-pointer group-hover:scale-105 transition duration-300" onclick="openLightbox('doc', ${i})">
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center pointer-events-none">
+                            <div class="group relative bg-slate-900 border border-slate-800 overflow-hidden cursor-pointer hover:border-lime-400 transition" onclick="openLightbox('doc', ${i})">
+                                <img src="Namaiki Cycles_Page_${numStr}.jpg" alt="Archive Page ${i}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                                     <span class="text-xs font-mono bg-black/80 text-lime-400 px-2.5 py-1 border border-lime-400/30">View Page ${i}</span>
                                 </div>
                             </div>
@@ -194,8 +194,8 @@
 
             <!-- Featured CAD Image Card (Single Image) -->
             <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group">
-                <div class="overflow-hidden">
-                    <img src="photos/NamaikiCycles_DS-Y_CAD.jpg" alt="Namaiki Cycles DS-Y Technical CAD Illustration" class="w-full h-auto max-h-[450px] object-cover cursor-pointer group-hover:scale-105 transition duration-300" onclick="openLightbox('cad', 'photos/NamaikiCycles_DS-Y_CAD.jpg')">
+                <div class="overflow-hidden cursor-pointer" onclick="openLightbox('cad', 'photos/NamaikiCycles_DS-Y_CAD.jpg')">
+                    <img src="photos/NamaikiCycles_DS-Y_CAD.jpg" alt="Namaiki Cycles DS-Y Technical CAD Illustration" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
                     Technical Drawing: Namaiki Cycles DS-Y Frame CAD Illustration (Click to view full size)
@@ -234,8 +234,8 @@
 
                 <!-- Featured Photo Card: Namaiki_12.JPG -->
                 <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group">
-                    <div class="overflow-hidden">
-                        <img src="photos/Namaiki_12.JPG" alt="RODO / Namaiki Archive Feature" class="w-full h-auto max-h-[450px] object-cover cursor-pointer group-hover:scale-105 transition duration-300" onclick="openLightbox('photo', 12)">
+                    <div class="overflow-hidden cursor-pointer" onclick="openLightbox('photo', 12)">
+                        <img src="photos/Namaiki_12.JPG" alt="RODO / Namaiki Archive Feature" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
                     </div>
                     <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
                         Archive Feature: RODO / Namaiki Prototype Build (Click to view full size)
@@ -271,9 +271,9 @@
                     photoFiles.forEach((filename, index) => {
                         const num = index + 1;
                         document.write(`
-                            <div class="group relative bg-slate-900 border border-slate-800 overflow-hidden hover:border-lime-400 transition">
-                                <img src="photos/${filename}" alt="Namaiki Archive Photo ${num}" class="w-full h-48 object-cover cursor-pointer group-hover:scale-105 transition duration-300" onclick="openLightbox('photo', ${num})">
-                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center pointer-events-none">
+                            <div class="group relative bg-slate-900 border border-slate-800 overflow-hidden cursor-pointer hover:border-lime-400 transition" onclick="openLightbox('photo', ${num})">
+                                <img src="photos/${filename}" alt="Namaiki Archive Photo ${num}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                                     <span class="text-xs font-mono bg-black/80 text-lime-400 px-2.5 py-1 border border-lime-400/30">View Photo ${num}</span>
                                 </div>
                             </div>
@@ -506,6 +506,7 @@
             const mainPanel = document.getElementById('lightbox-main-panel');
             const prevArrow = document.getElementById('lightbox-prev-arrow');
             const nextArrow = document.getElementById('lightbox-next-arrow');
+            const navButtons = document.getElementById('lightbox-nav-buttons');
 
             if (mode === 'cad') {
                 titleEl.innerText = "Namaiki Cycles DS-Y — Technical CAD Drawing";
