@@ -25,7 +25,7 @@ https://www.facebook.com/groups/164819395686161/posts/1596400359194717/
 I have opened up the archive to present a historical timeline based on preserved correspondence, original design records and later public statements.
 As of this post, Namaiki Cycles retains an archive of original email files, including available message headers, timestamps and associated backup records. These are preserved alongside related design files, CAD drawings and project records.
 
-The extracts published below are a record of email correspondence between Brad Hodges (evil4bc@mac.com) and Philip Lord (philip@namaikicycles.com).
+The extracts published below are a record of email correspondence between Brad Hodges (evil4bc@[redacted]) and Philip Lord (philip@namaikicycles.com).
 
 The extracts are transcribed from the archived email correspondence. Where passages have been shortened, omissions are indicated by ellipses. They are presented alongside relevant later public statements to provide a documentary timeline of the events and the differing accounts of Namaiki Cycles' history.
 This timeline focuses on correspondence relevant to the matters discussed below. It is not intended to reproduce every communication or resolve every aspect of the parties' respective accounts.
