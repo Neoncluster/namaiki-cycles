@@ -17,15 +17,18 @@ As you can tell, we were a small operation, but passionate bicycle riders noneth
 For background and additional context, you may also wish to read my two earlier posts:
 
 1. Clarification of Namaiki Cycles' History and Brad Hodges' Involvement.
+https://www.facebook.com/groups/164819395686161/posts/1592846529550100/
+
 2. Namaiki Cycles releases historic frame drawings and CAD illustrations for public use.
+https://www.facebook.com/groups/164819395686161/posts/1596400359194717/
 
-I'm opening up the archive to present a historical timeline based on preserved correspondence, original design records and later public statements.
-
+I have opened up the archive to present a historical timeline based on preserved correspondence, original design records and later public statements.
 As of this post, Namaiki Cycles retains an archive of original email files, including available message headers, timestamps and associated backup records. These are preserved alongside related design files, CAD drawings and project records.
 
-The archived material was recovered from an old Namaiki Cycles backup hard drive dating from 2004.
+The extracts published below are a record of email correspondence between Brad Hodges (evil4bc@mac.com) and Philip Lord (philip@namaikicycles.com).
 
-The extracts published below are transcribed from the archived email correspondence. Where passages have been shortened, omissions are indicated by ellipses. They are presented alongside relevant later public statements to provide a documentary timeline of the events and the differing accounts of Namaiki Cycles' history.
+The extracts are transcribed from the archived email correspondence. Where passages have been shortened, omissions are indicated by ellipses. They are presented alongside relevant later public statements to provide a documentary timeline of the events and the differing accounts of Namaiki Cycles' history.
+This timeline focuses on correspondence relevant to the matters discussed below. It is not intended to reproduce every communication or resolve every aspect of the parties' respective accounts.
 
 This timeline focuses on correspondence relevant to the matters discussed below. It is not intended to reproduce every communication or resolve every aspect of the parties' respective accounts.
 
