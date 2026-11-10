@@ -264,9 +264,9 @@
                         "Namaiki_01.JPG", "Namaiki_02.jpg", "Namaiki_03.JPG", "Namaiki_04.jpg",
                         "Namaiki_05.jpg", "Namaiki_06.jpg", "Namaiki_07.jpg", "Namaiki_08.JPG",
                         "Namaiki_09.jpg", "Namaiki_10.jpg", "Namaiki_11.JPG", "Namaiki_12.JPG",
-                        "Namaiki_13.jpg", "Namaiki_14.jpg", "Namaiki_15.jpg", "Namaiki_16.jpg",
-                        "Namaiki_17.jpg", "Namaiki_18.jpg", "Namaiki_19.jpg", "Namaiki_20.jpg",
-                        "Namaiki_21.jpg", "Namaiki_22.jpg", "Namaiki_23.jpg"
+                        "Namaiki_13.jpg", "Namaiki_14.jpg", "Namaiki_16.jpg", "Namaiki_17.jpg",
+                        "Namaiki_18.jpg", "Namaiki_19.jpg", "Namaiki_20.jpg", "Namaiki_21.jpg",
+                        "Namaiki_22.jpg", "Namaiki_23.jpg", "Namaiki_24.jpg", "Namaiki_25.jpg"
                     ];
                     photoFiles.forEach((filename, index) => {
                         const num = index + 1;
@@ -365,7 +365,16 @@
         let currentMode = 'doc'; // 'doc', 'photo', or 'cad'
         let currentIndex = 1;
         const totalDocs = 16;
-        const totalPhotos = 16;
+        
+        const photoFiles = [
+            "Namaiki_01.JPG", "Namaiki_02.jpg", "Namaiki_03.JPG", "Namaiki_04.jpg",
+            "Namaiki_05.jpg", "Namaiki_06.jpg", "Namaiki_07.jpg", "Namaiki_08.JPG",
+            "Namaiki_09.jpg", "Namaiki_10.jpg", "Namaiki_11.JPG", "Namaiki_12.JPG",
+            "Namaiki_13.jpg", "Namaiki_14.jpg", "Namaiki_16.jpg", "Namaiki_17.jpg",
+            "Namaiki_18.jpg", "Namaiki_19.jpg", "Namaiki_20.jpg", "Namaiki_21.jpg",
+            "Namaiki_22.jpg", "Namaiki_23.jpg", "Namaiki_24.jpg", "Namaiki_25.jpg"
+        ];
+        const totalPhotos = photoFiles.length;
 
         const pageData = {
             1: {
@@ -426,20 +435,23 @@
                 Caption under the main photo: Original bicycle frame made by “Namaiki” David Duval-Smith (front) and Wieden+Kennedy Japan AD Philip Lord, in front of the Namaiki office “deluxe”.`
             },
             6: {
-                file: "Designers' Workshop — Origin Story & Street Riding (Page 6 of 16)",
+                file: "Namaiki Cycles_Page_06.jpg",
+                title: "Designers' Workshop — Origin Story & Street Riding (Page 6 of 16)",
                 text: `<strong>How the bike was born (two years earlier):</strong><br>
                 One day while hanging out with friend Phil (Philip Lord) at a park, riding bikes and drinking beer, they talked about how current bikes were mediocre. “Let’s just build one ourselves.” They didn’t care about profit — if you don’t have that philosophy you won’t survive.<br><br>
                 Mike agreed and the frame design began. The short rear end makes wheelies easy; the bike is deliberately different from ordinary MTBs. Once the first batch of frames arrived from the factory, orders started coming in.<br><br>
                 Big photo: David’s stylish jump — the small rear wheel is the secret to easy wheelies.`
             },
             7: {
-                file: "Designers' Workshop — Studio Culture & Philosophy (Page 7 of 16)",
+                file: "Namaiki Cycles_Page_07.jpg",
+                title: "Designers' Workshop — Studio Culture & Philosophy (Page 7 of 16)",
                 text: `<strong>Inside deluxe (Azabu-Juban):</strong> A 200 m² warehouse shared with ~15 creators (Klein Dytham architecture, Spin Off interior design, Tokyo Brewing Company, CG/DJ Midori Kuroyaku, musician DOREMI, artist Tanaka Noriyuki, etc.). Bikes are ridden freely inside the space.<br><br>
                 <strong>David on how they work:</strong><br>
                 <em>“We never pitch design work. When we just do the things we’re interested in, people notice and come to us. That’s the best. If you pitch, you sound like telemarketing. But if something interesting appears, push it, talk to people, pull others in — friends help out and it naturally becomes a business.”</em>`
             },
             8: {
-                file: "clic.ex Magazine Feature #77 (Page 8 of 16)",
+                file: "Namaiki Cycles_Page_08.jpg",
+                title: "clic.ex Magazine Feature #77 (Page 8 of 16)",
                 text: `• <strong>Product Spotlight:</strong> Namaiki DS-Y Frame (¥140,000) & Yoroshiku Jersey (¥12,800).<br>
                 • <strong>Catchphrase:</strong> <em>"Cool. Easy to jump. Strong."</em><br>
                 • <strong>Copy:</strong> 7005 aluminum, handmade in USA, extremely durable, surprisingly light. Absolutely "Give Up" before the frame does!<br>
@@ -508,7 +520,6 @@
                 translationWrap.classList.add('hidden');
                 mainPanel.className = "w-full flex justify-center items-center";
                 
-                // Hide prev/next buttons for single CAD viewer
                 prevArrow.classList.add('hidden');
                 nextArrow.classList.add('hidden');
             } else if (mode === 'doc') {
@@ -570,7 +581,6 @@
             openLightbox(currentMode, currentIndex);
         }
 
-        // Keyboard navigation support for lightbox
         document.addEventListener('keydown', function(e) {
             const lb = document.getElementById('lightbox');
             if (!lb.classList.contains('hidden')) {
