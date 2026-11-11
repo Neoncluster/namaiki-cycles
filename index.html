@@ -184,7 +184,7 @@
             </div>
         </section>
 
-        <!-- Flagship Model: DS-Y with CAD Image Feature -->
+        <!-- Flagship Model: DS-Y with CAD Image Feature & Closeups Feature -->
         <section class="space-y-6 bg-slate-900/40 border border-slate-800 p-8">
             <header class="space-y-2">
                 <span class="text-lime-400 font-mono text-xs uppercase tracking-widest">Flagship Model</span>
@@ -199,6 +199,16 @@
                 </div>
                 <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
                     Technical Drawing: Namaiki Cycles DS-Y Frame CAD Illustration (Click to view full size)
+                </div>
+            </div>
+
+            <!-- Featured Closeups Image Card: Namaiki_DS-Y_closeups.jpg -->
+            <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group">
+                <div class="overflow-hidden cursor-pointer" onclick="openLightbox('cad', 'photos/Namaiki_DS-Y_closeups.jpg')">
+                    <img src="photos/Namaiki_DS-Y_closeups.jpg" alt="Namaiki Cycles DS-Y Frame Closeups" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
+                    Detail View: Namaiki Cycles DS-Y Frame Closeups (Click to view full size)
                 </div>
             </div>
 
@@ -504,14 +514,14 @@
             const navButtons = document.getElementById('lightbox-nav-buttons');
 
             if (mode === 'cad') {
-                titleEl.innerText = "Namaiki Cycles DS-Y — Technical CAD Drawing";
+                titleEl.innerText = "Namaiki Cycles DS-Y — Technical & Detail Views";
                 imgEl.src = indexOrPath;
                 imgEl.className = "max-w-full max-h-[85vh] object-contain border border-slate-800 shadow-2xl";
                 translationWrap.classList.remove('block');
                 translationWrap.classList.add('hidden');
                 mainPanel.className = "w-full flex justify-center items-center";
                 
-                // Hide prev/next buttons for single CAD viewer
+                // Hide prev/next buttons for single CAD/Closeup viewer
                 prevArrow.classList.add('hidden');
                 nextArrow.classList.add('hidden');
             } else if (mode === 'doc') {
