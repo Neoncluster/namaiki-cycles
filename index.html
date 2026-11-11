@@ -163,6 +163,16 @@
                 </div>
             </div>
 
+            <!-- Added Daivd_Philip.jpg below founders notes -->
+            <div class="bg-slate-950 border border-slate-800/80 overflow-hidden group">
+                <div class="overflow-hidden cursor-pointer" onclick="openLightbox('cad', 'photos/Daivd_Philip.jpg')">
+                    <img src="photos/Daivd_Philip.jpg" alt="David Duval-Smith and Philip Lord" class="w-full h-auto max-h-[450px] object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-3 text-center bg-slate-900/80 text-xs font-mono text-slate-400 border-t border-slate-800">
+                    David Duval-Smith & Philip Lord (Click to view full size)
+                </div>
+            </div>
+
             <p class="text-xs text-slate-400 border-t border-slate-800/80 pt-4 italic">
                 Grounded in over a decade of shared BMX riding and friendship, Namaiki Cycles operated as an equal, independent creative venture funded entirely by its creators without outside corporate ownership.
             </p>
@@ -514,14 +524,14 @@
             const navButtons = document.getElementById('lightbox-nav-buttons');
 
             if (mode === 'cad') {
-                titleEl.innerText = "Namaiki Cycles DS-Y — Technical & Detail Views";
+                titleEl.innerText = "Namaiki Cycles — Archive Detail View";
                 imgEl.src = indexOrPath;
                 imgEl.className = "max-w-full max-h-[85vh] object-contain border border-slate-800 shadow-2xl";
                 translationWrap.classList.remove('block');
                 translationWrap.classList.add('hidden');
                 mainPanel.className = "w-full flex justify-center items-center";
                 
-                // Hide prev/next buttons for single CAD/Closeup viewer
+                // Hide prev/next buttons for single detail viewer
                 prevArrow.classList.add('hidden');
                 nextArrow.classList.add('hidden');
             } else if (mode === 'doc') {
