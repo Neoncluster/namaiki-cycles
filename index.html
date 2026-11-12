@@ -183,12 +183,12 @@
             <div class="bg-slate-900 border border-slate-800 p-6 space-y-3">
                 <h3 class="text-lime-400 font-semibold text-lg">Name & Meaning</h3>
                 <div class="flex flex-col sm:flex-row items-center gap-6">
-                    <p class="text-slate-300 text-sm leading-relaxed flex-1">
-                        <em>Namaiki</em> (生意気) is a Japanese term meaning cheeky, saucy, impudent, or insolent—capturing the rebellious, fun-first ethos of the brand.
-                    </p>
-                    <div class="w-32 sm:w-40 flex-shrink-0 bg-slate-950 p-4 border border-slate-800 flex items-center justify-center cursor-pointer group" onclick="openLightbox('cad', 'photos/Namaiki logo_skull.png')">
-                        <img src="photos/Namaiki logo_skull.png" alt="Namaiki Skull Logo" class="w-full h-auto max-h-[260px] object-contain group-hover:scale-105 transition duration-300">
+                    <div class="w-32 sm:w-40 flex-shrink-0 flex items-center justify-center cursor-pointer group" onclick="openLightbox('cad', 'photos/Namaiki logo_skull.png')">
+                        <img src="photos/Namaiki logo_skull.png" alt="Namaiki Skull Logo" class="w-full h-auto max-h-[300px] object-contain group-hover:scale-105 transition duration-300">
                     </div>
+                    <p class="text-slate-300 text-sm leading-relaxed flex-1">
+                        <em>Namaiki</em> (生意気) is often thought to break down literally as <em>nama</em> (raw / natural) and <em>iki</em> (breath / spirit)—as if translating to "raw breath." However, in actual Japanese kanji composition, <strong>生</strong> (nama) here functions as a prefix meaning "impure," "saucy," or "half-baked," combined with <strong>意気</strong> (iki) meaning spirit, disposition, or mettle. Together, <em>namaiki</em> (生意気) translates idiomatically to cheeky, saucy, impudent, or insolent—perfectly capturing the rebellious, cheeky, fun-first ethos of the brand.
+                    </p>
                 </div>
             </div>
             <div class="bg-slate-900 border border-slate-800 p-6 space-y-3">
@@ -338,7 +338,7 @@
             <ol class="space-y-2 text-xs text-slate-400 font-mono list-decimal pl-4">
                 <li><a href="https://www.pinkbike.com/news/article1790.html" target="_blank" rel="noopener" class="hover:underline text-lime-400">Pinkbike (Dec 2003): "RODO Shows Spyphoto"</a> - Coverage of the RODO LO-8 downhill frame prototype.</li>
                 <li><a href="https://web.archive.org/web/20050308182919/http://www.rodoracing.com/" target="_blank" rel="noopener" class="hover:underline text-lime-400">Wayback Machine: RODORACING.COM</a> - Official Rodo Racing relaunch and announcement archive.</li>
-                <li><a href="https://web.archive.org/web/20030411125346/http://www.namaikicycles.com/american/Frameset.html" target="_blank" rel="noopener" class="hover:underline text-lime-400">Wayback Machine: NAMAIKICYCLES.COM</a> - Original brand site detailing Dave and Phil's 13+ year BMX roots.</li>
+                <li><a href="https://web.archive.org/web/20030411125346/http://www.namaikicycles.com/american/Frameset.html" target="_blank" rel="noopener" class="hover:underline text-lime-400">Wayback Machine: NAMAIKICYCLES.COM</a> - Official brand site detailing Dave and Phil's 13+ year BMX roots.</li>
                 <li>Japanese Print Publications: <em>Bicycle Club Magazine</em> (1999/2000), <em>MTB Magazine Japan</em> (2001), <em>clic.ex Magazine</em> (#77), <em>GOD Magazine</em>, <em>MTB All Catalog (2001/2002/2004)</em>, and <em>Designers' Workshop</em> (Vol. 16, No. 106).</li>
             </ol>
         </section>
@@ -507,7 +507,7 @@
                 title: "Sports Bicycle Catalog 2004 — Rodo Listing (Page 12 of 16)",
                 text: `<strong>RODO DS.C / LO-8 Listing:</strong><br>
                 • Collaborated between Bike Fanatics designer Philip Lord and Wheel Works.<br>
-                • Concept: <em>'High-quality and cool.'</em><br>
+                • Concept: 'High-quality and cool.'<br>
                 • Built with Kinesis aluminum frames, RODO Bull Shit forks, RODO Hubby Hubs, and RODO Tac`
             },
             13: { file: "Namaiki Cycles_Page_13.jpg", title: "Archive Page 13 of 16", text: "Historical catalog documentation and photography." },
@@ -563,7 +563,7 @@
                 mainPanel.className = "w-full flex justify-center items-center";
                 
                 prevArrow.classList.remove('hidden');
-                nextArrow.classList.remove('hidden');
+                nextArrow.classList.add('hidden');
             }
 
             lb.classList.remove('hidden');
