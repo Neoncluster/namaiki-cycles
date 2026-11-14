@@ -187,7 +187,7 @@
                         <img src="photos/Namaiki logo_skull.png" alt="Namaiki Skull Logo" class="w-full h-auto max-h-[300px] object-contain group-hover:scale-105 transition duration-300">
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed flex-1">
-                        <em>Namaiki</em> (生意気) In Japanese kanji, <strong>生</strong> (nama) is a prefix meaning "impure," "saucy," or even "half-baked," combined with <strong>意気</strong> (iki) meaning spirit, disposition, or mettle. Together, <em>namaiki</em> (生意気) translates idiomatically to cheeky, saucy, or impudent, capturing the rebellious, cheeky, fun-first ethos of the brand.
+                        <em>Namaiki</em> (生意気) is often translated colloquially as "raw breath" (combining <em>nama</em> for raw/natural and <em>iki</em> for breath/spirit). In standard kanji composition, <strong>生</strong> (nama) here functions as a prefix meaning "impure," "saucy," or "half-baked," while <strong>意気</strong> (iki) means spirit, disposition, or mettle. Together, <em>namaiki</em> translates idiomatically to cheeky, saucy, or impudent—capturing the rebellious, fun-first ethos of the brand.
                     </p>
                 </div>
             </div>
@@ -282,7 +282,7 @@
                 <p class="text-slate-400 text-sm">Explore original photographs from the archive. Click any thumbnail to view full-size.</p>
             </header>
 
-            <!-- Explicit Photo Thumbnail Grid from 'photos/' subfolder -->
+            <!-- Explicit Photo Thumbnail Grid from 'photos/' subfolder (Updated up to Namaiki_30.jpg) -->
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 <script>
                     const photoFiles = [
@@ -291,7 +291,9 @@
                         "Namaiki_09.jpg", "Namaiki_10.jpg", "Namaiki_11.JPG", "Namaiki_12.JPG",
                         "Namaiki_13.jpg", "Namaiki_14.jpg", "Namaiki_15.jpg", "Namaiki_16.jpg",
                         "Namaiki_17.jpg", "Namaiki_18.jpg", "Namaiki_19.jpg", "Namaiki_20.jpg",
-                        "Namaiki_21.jpg", "Namaiki_22.jpg", "Namaiki_23.jpg"
+                        "Namaiki_21.jpg", "Namaiki_22.jpg", "Namaiki_23.jpg", "Namaiki_24.jpg",
+                        "Namaiki_25.jpg", "Namaiki_26.jpg", "Namaiki_27.jpg", "Namaiki_28.jpg",
+                        "Namaiki_29.jpg", "Namaiki_30.jpg"
                     ];
                     photoFiles.forEach((filename, index) => {
                         const num = index + 1;
@@ -390,7 +392,7 @@
         let currentMode = 'doc'; // 'doc', 'photo', or 'cad'
         let currentIndex = 1;
         const totalDocs = 16;
-        const totalPhotos = 23;
+        const totalPhotos = 30; // Updated total count to 30 photos
 
         const pageData = {
             1: {
@@ -516,6 +518,17 @@
             16: { file: "Namaiki Cycles_Page_16.jpg", title: "Archive Page 16 of 16", text: "Historical catalog documentation and photography." }
         };
 
+        const photoFiles = [
+            "Namaiki_01.JPG", "Namaiki_02.jpg", "Namaiki_03.JPG", "Namaiki_04.jpg",
+            "Namaiki_05.jpg", "Namaiki_06.jpg", "Namaiki_07.jpg", "Namaiki_08.JPG",
+            "Namaiki_09.jpg", "Namaiki_10.jpg", "Namaiki_11.JPG", "Namaiki_12.JPG",
+            "Namaiki_13.jpg", "Namaiki_14.jpg", "Namaiki_15.jpg", "Namaiki_16.jpg",
+            "Namaiki_17.jpg", "Namaiki_18.jpg", "Namaiki_19.jpg", "Namaiki_20.jpg",
+            "Namaiki_21.jpg", "Namaiki_22.jpg", "Namaiki_23.jpg", "Namaiki_24.jpg",
+            "Namaiki_25.jpg", "Namaiki_26.jpg", "Namaiki_27.jpg", "Namaiki_28.jpg",
+            "Namaiki_29.jpg", "Namaiki_30.jpg"
+        ];
+
         function openLightbox(mode, indexOrPath) {
             currentMode = mode;
             
@@ -563,7 +576,7 @@
                 mainPanel.className = "w-full flex justify-center items-center";
                 
                 prevArrow.classList.remove('hidden');
-                nextArrow.classList.add('hidden');
+                nextArrow.classList.remove('hidden');
             }
 
             lb.classList.remove('hidden');
